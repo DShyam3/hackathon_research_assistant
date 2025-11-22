@@ -1,0 +1,14 @@
+[2025-11-22 12:52:51] ASSISTANT: Hello! How can I assist you today?
+[2025-11-22 12:52:56] USER: hello (language: en, final: False)
+[2025-11-22 12:52:56] USER: hello (language: en, final: False)
+[2025-11-22 12:52:56] USER: Hello hello. (language: en, final: True)
+[2025-11-22 12:52:56] USER: Hello hello.
+[2025-11-22 12:53:00] ASSISTANT: Hello hello! How can I help you today?
+[2025-11-22 12:53:03] USER: i (language: en, final: False)
+[2025-11-22 12:53:04] USER: i have (language: en, final: False)
+[2025-11-22 12:53:04] USER: i have fixed (language: en, final: False)
+[2025-11-22 12:53:04] USER: i have fixed the (language: en, final: False)
+[2025-11-22 12:53:04] USER: i have fixed the (language: en, final: False)
+[2025-11-22 12:53:05] USER: i have fixed the (language: en, final: False)
+[2025-11-22 12:53:05] USER: i have fixed the (language: , final: True)
+[2025-11-22 12:53:05] USER: i have fixed the

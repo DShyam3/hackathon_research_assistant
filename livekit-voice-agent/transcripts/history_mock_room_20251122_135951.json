@@ -1,0 +1,188 @@
+{
+  "items": [
+    {
+      "id": "item_3604515e9ce3",
+      "type": "agent_handoff",
+      "new_agent_id": "assistant"
+    },
+    {
+      "id": "item_48dc35824cf6",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Hello! How can I assist you today?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763819992.803957,
+        "stopped_speaking_at": 1763819995.452163,
+        "llm_node_ttft": 0.5618759159988258,
+        "tts_node_ttfb": 0.4123552500095684
+      }
+    },
+    {
+      "id": "item_9883602606bd",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "I need the latest information on open source models that can run on my m one macbook pro with sixteen gigabytes"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8638195238095238,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 8.330098353326321e-07
+      }
+    },
+    {
+      "id": "item_9dfdad7dca53",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I'll research that for you. Let me ask a few clarifying questions to give you the best results. Question 1 of 3: What specific open source models are you interested in?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_fffc733c9be1",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Got it! Just to clarify, are you looking for open source AI or machine learning models specifically optimized for macOS on an M1 MacBook Pro with 16GB RAM? Also, are you interested in a particular type of model, like language models, computer vision, or something else?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763820020.962501,
+        "stopped_speaking_at": 1763820038.749866,
+        "llm_node_ttft": 0.5072880420193542,
+        "tts_node_ttfb": 0.7387175000039861
+      }
+    },
+    {
+      "id": "item_794d36ef61e6",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Question 2 of 3: Are you looking for models for text, images, or both?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_8295b564746a",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Language models that can run on sixteen gigabytes"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.88182225,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 9.580107871443033e-07
+      }
+    },
+    {
+      "id": "item_788bcd20ec1e",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Question 3 of 3: Do you need help with installation or usage?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_6bbbec73a915",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "With apple ml"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.856765090909091,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 1.04197533801198e-06
+      }
+    },
+    {
+      "id": "item_d6598fc86c1d",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Great! You're looking for open source language models that can run on your M1 MacBook Pro with 16GB RAM, using Apple’s ML frameworks (like Core ML). I’ll search for the latest compatible models optimized for that setup and possibly tools to convert or run them efficiently. Give me a moment."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763820048.105867,
+        "stopped_speaking_at": 1763820064.3611221,
+        "llm_node_ttft": 0.9098268329980783,
+        "tts_node_ttfb": 0.7234652079932857
+      }
+    },
+    {
+      "id": "item_3bcb549a0b25",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Searching..."
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_d787be2202b2",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Do you remember activated environment for you"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.6248417142857142,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 8.750066626816988e-07
+      }
+    },
+    {
+      "id": "item_def240bc9eae",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Sorry, I had trouble researching that. 'SearchResponse' object has no attribute 'get'"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_87a3b41d27a1",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I don’t retain past conversation details after the session ends, but I keep track of our current chat. So I remember that you want open source language models running on your M1 MacBook Pro with 16GB RAM using Apple’s ML tools. How can I assist you next?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763820141.201843,
+        "stopped_speaking_at": 1763820153.4628649,
+        "llm_node_ttft": 0.497764959000051,
+        "tts_node_ttfb": 0.5049209170101676
+      }
+    }
+  ]
+}

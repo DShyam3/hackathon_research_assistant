@@ -1,0 +1,51 @@
+{
+  "items": [
+    {
+      "id": "item_63663dd3ac3d",
+      "type": "agent_handoff",
+      "new_agent_id": "assistant"
+    },
+    {
+      "id": "item_d02b184f9685",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "What specific aspect or use case interests you?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_f4d1d5052300",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Give me the latest research from openai what have they released recently."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8919980000000001,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 2.042012056335807e-06
+      }
+    },
+    {
+      "id": "item_653cc91604da",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "As of June 2024, OpenAI's latest research and releases include advancements in large language models, multimodal AI, and safety improvements. Notably, they have released GPT-4 Turbo, an optimized version of GPT-4 that's faster and cheaper to run. Additionally, OpenAI has been working on enhancing alignment and interpretability of AI systems, as well as expanding the capabilities of their APIs to support more diverse applications involving language, vision, and code.\n\nFor the most up-to-date and detailed information, you can check OpenAI's official blog and research publications at https://openai.com/blog and https://openai.com/research. If you want, I can provide summaries of any specific recent paper or release from OpenAI."
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763822885.572217,
+        "stopped_speaking_at": 1763822900.9283369,
+        "llm_node_ttft": 0.9367926669947337,
+        "tts_node_ttfb": 0.6862548749777488
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "item_f85dda55d71e",
+      "type": "agent_handoff",
+      "new_agent_id": "assistant"
+    },
+    {
+      "id": "item_4313422302dd",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Tell me more about llms."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.9358092000000001,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 1.5829864423722029e-06
+      }
+    },
+    {
+      "id": "item_2618b20cb32d",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I understand you'd like to know more about LLMs. To make sure I provide the most relevant and detailed information, could you please specify what aspect of LLMs you're interested in? For example, are you looking for information on Large Language Models in general, their applications, technical architecture, recent advancements, or something else?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763823389.526706,
+        "stopped_speaking_at": 1763823401.004626,
+        "llm_node_ttft": 0.5898905000067316,
+        "tts_node_ttfb": 1.0304355419939384
+      }
+    }
+  ],
+  "research_sessions": [
+    {
+      "timestamp": "2025-11-22T14:56:27.904397",
+      "type": "research_session",
+      "session_id": "mock_room",
+      "original_query": "Tell me more about llms.",
+      "clarifying_questions": [],
+      "user_answers": [],
+      "research_summary": "",
+      "detailed_results": null
+    }
+  ]
+}

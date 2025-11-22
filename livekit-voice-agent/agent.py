@@ -58,20 +58,20 @@ async def my_agent(ctx: agents.JobContext):
 
     async def handle_research_flow(user_query: str) -> bool:
         """
-        Execute research immediately without clarifying questions
+        Execute research immediately - speak and research in parallel
         """
         await research_session.initiate_research(user_query)
         
-        # Acknowledge the request briefly
-        await session.say(
-            "I'll research that for you.",
-            allow_interruptions=True
-        )
-        
-        # Execute research immediately in background
+        # Start research task FIRST (don't await)
         nonlocal research_task
         research_task = asyncio.create_task(_execute_research_in_background())
         pending_tasks.append(research_task)
+        
+        # Then acknowledge - this happens in parallel with research
+        await session.say(
+            "Researching now.",
+            allow_interruptions=True
+        )
         
         return True
 

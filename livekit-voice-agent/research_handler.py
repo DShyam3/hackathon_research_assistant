@@ -92,10 +92,11 @@ class ResearchSession:
                 response = self.valyu_client.search(
                     query,
                     search_type="all",  # Search both web and proprietary sources
-                    max_num_results=10,
+                    max_num_results=15,  # Increased for more comprehensive results
+                    response_length="large",  # ~100k characters per result for detail
                     max_price=30,
                     relevance_threshold=0.5,
-                    is_tool_call=True
+                    is_tool_call=True  # Optimized for AI processing
                 )
                 print(f"DEBUG: Valyu search successful, got response")
                 return response
@@ -115,26 +116,26 @@ class ResearchSession:
         return " ".join(parts)
 
     async def _generate_summary(self) -> str:
-        """Generate concise summary of research results"""
+        """Generate detailed summary of research results"""
         if not self.research_results or not hasattr(self.research_results, 'results') or not self.research_results.results:
             return "No results found for that query."
 
         try:
-            # Extract top 2 results for summary
-            top_results = self.research_results.results[:2]
+            # Extract top 5 results for more comprehensive summary
+            top_results = self.research_results.results[:5]
             results_text = "\n".join([
-                f"- {getattr(r, 'title', 'N/A')}: {r.content[:100] if hasattr(r, 'content') and r.content else 'N/A'}"
+                f"- {getattr(r, 'title', 'N/A')}: {r.content[:300] if hasattr(r, 'content') and r.content else 'N/A'}"
                 for r in top_results
             ])
 
-            prompt = f"""Summarize in 2 sentences maximum.
+            prompt = f"""Provide a detailed summary in 3-4 sentences covering the key findings from these research results:
 
 {results_text}"""
 
             response = self.openai_client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[{"role": "user", "content": prompt}],
-                max_tokens=100,
+                max_tokens=200,  # Increased for more detailed summary
                 temperature=0.7
             )
             return response.choices[0].message.content

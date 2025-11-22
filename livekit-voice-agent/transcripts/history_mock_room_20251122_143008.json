@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": "item_e4b37658e450",
+      "type": "agent_handoff",
+      "new_agent_id": "assistant"
+    },
+    {
+      "id": "item_a019890f509e",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Hello! I'm here to help you with any questions or information you need. What can I assist you with today?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763821809.61605,
+        "stopped_speaking_at": 1763821814.586245,
+        "llm_node_ttft": 0.6037949160090648,
+        "tts_node_ttfb": 0.4282854580087587
+      }
+    },
+    {
+      "id": "item_fbcd254b6819",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Tell me about the latest information about large language models."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.9407804000000001,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 3.083987394347787e-06
+      }
+    },
+    {
+      "id": "item_b33fbaf1c30f",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I'll research that for you. Let me ask a couple of clarifying questions. Question 1 of 2: What specific updates are you looking for?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_e2d3ee73ced7",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "To give you the latest updates on large language models, could you please specify if you're interested in recent research breakthroughs, new model releases, applications, or ethical considerations? This will help me provide the most relevant information."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763821827.675174,
+        "stopped_speaking_at": 1763821841.0047429,
+        "llm_node_ttft": 0.5520331669831648,
+        "tts_node_ttfb": 0.7401084169978276
+      }
+    }
+  ]
+}
