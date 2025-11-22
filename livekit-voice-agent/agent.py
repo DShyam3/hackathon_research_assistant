@@ -28,7 +28,7 @@ TRANSCRIPTS_DIR.mkdir(exist_ok=True)
 
 class Assistant(Agent):
     def __init__(self, research_session: ResearchSession = None, in_research_mode: bool = False) -> None:
-        instructions = """You are a research assistant. When the user asks a question, acknowledge that you will execute a deep research using Valyu and wait for clarifying information. Do not answer their question directly - instead, acknowledge the research request and wait for their responses to clarifying questions."""
+        instructions = """You are a research assistant. When the user asks a question, acknowledge briefly that research is being conducted. Do not ask clarifying questions. The research will be executed automatically in the background using Valyu search."""
         super().__init__(instructions=instructions)
         self.research_session = research_session
         self.in_research_mode = in_research_mode
@@ -58,20 +58,21 @@ async def my_agent(ctx: agents.JobContext):
 
     async def handle_research_flow(user_query: str) -> bool:
         """
-        Initiate research flow by acknowledging and executing immediately
+        Execute research immediately without clarifying questions
         """
         await research_session.initiate_research(user_query)
-
-        # Acknowledge the request
-        await session.generate_reply(
-            instructions="Say something brief like 'Researching that for you...' or 'Let me look into that...' Keep it to one sentence."
+        
+        # Acknowledge the request briefly
+        await session.say(
+            "I'll research that for you.",
+            allow_interruptions=True
         )
-
+        
         # Execute research immediately in background
         nonlocal research_task
         research_task = asyncio.create_task(_execute_research_in_background())
         pending_tasks.append(research_task)
-
+        
         return True
 
     async def _execute_research_in_background():
@@ -88,9 +89,9 @@ async def my_agent(ctx: agents.JobContext):
 
             research_entries.append(research_session.get_transcript_entry())
 
-            # Speak the summary
-            summary_with_note = f"Here's a brief summary of my research: {summary}"
-            await session.say(summary_with_note, allow_interruptions=True)
+            # Notify that research is complete and available
+            completion_message = f"Research complete. {summary} The full results have been saved and are available."
+            await session.say(completion_message, allow_interruptions=True)
 
             research_session.reset()
             research_task = None
@@ -103,9 +104,9 @@ async def my_agent(ctx: agents.JobContext):
             research_task = None
 
     async def _handle_user_input(event: UserInputTranscribedEvent):
-        """Async handler for user input - trigger research immediately"""
+        """Handle user input - execute research immediately"""
         if research_session.state == ResearchState.IDLE:
-            print(f"DEBUG: Triggering research for: {event.transcript}")
+            print(f"DEBUG: Initiating research for: {event.transcript}")
             await handle_research_flow(event.transcript)
 
     @session.on("user_input_transcribed")

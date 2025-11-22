@@ -44,29 +44,17 @@ class ResearchSession:
         """Always force research for all queries - no LLM fallback"""
         return True
 
-    async def initiate_research(self, query: str) -> str:
+    async def initiate_research(self, query: str) -> None:
         """Start research immediately - no clarifying questions"""
         self.original_query = query
         self.state = ResearchState.RESEARCHING
+        self.clarifying_questions = []
         self.user_answers = []
         self.answer_count = 0
 
-        # Skip questions, go straight to research
-        return None
-
-    def record_answer(self, answer: str) -> Optional[str]:
-        """Record user's answer and proceed to research after 1 answer"""
-        if self.state != ResearchState.COLLECTING_ANSWERS:
-            return None
-
-        self.user_answers[self.answer_count] = answer
-        self.answer_count += 1
-
-        if self.answer_count >= 1:
-            self.state = ResearchState.RESEARCHING
-            return None  # Signal to start research
-
-        return None
+    def record_answer(self, answer: str) -> bool:
+        """Not used in simplified flow"""
+        return False
 
     async def execute_research(self) -> str:
         """Execute Valyu search with robust error handling"""
@@ -103,11 +91,10 @@ class ResearchSession:
                 print(f"DEBUG: Valyu search attempt {attempt + 1} for query: {query}")
                 response = self.valyu_client.search(
                     query,
-                    search_type="proprietary",
+                    search_type="all",  # Search both web and proprietary sources
                     max_num_results=10,
                     max_price=30,
                     relevance_threshold=0.5,
-                    included_sources=["valyu/valyu-arxiv", "valyu/valyu-pubmed"],
                     is_tool_call=True
                 )
                 print(f"DEBUG: Valyu search successful, got response")
