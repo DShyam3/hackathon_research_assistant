@@ -1520,6 +1520,7 @@ dependencies = [
     { name = "livekit-plugins-noise-cancellation" },
     { name = "openai" },
     { name = "python-dotenv" },
+    { name = "valyu" },
 ]
 
 [package.metadata]
@@ -1530,6 +1531,7 @@ requires-dist = [
     { name = "livekit-plugins-noise-cancellation", specifier = "~=0.2" },
     { name = "openai", specifier = ">=1.0.0" },
     { name = "python-dotenv", specifier = ">=1.2.1" },
+    { name = "valyu", specifier = ">=2.2.6" },
 ]
 
 [[package]]

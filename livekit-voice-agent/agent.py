@@ -12,26 +12,26 @@ from livekit.plugins import (
 )
 
 from research_handler import ResearchSession, ResearchState
+import os
 
 load_dotenv(".env.local")
+
+# Verify required API keys
+if not os.getenv("VALYU_API_KEY"):
+    print("⚠️  WARNING: VALYU_API_KEY not found in environment!")
+if not os.getenv("OPENAI_API_KEY"):
+    print("⚠️  WARNING: OPENAI_API_KEY not found in environment!")
 
 # Create transcripts directory if it doesn't exist
 TRANSCRIPTS_DIR = Path("transcripts")
 TRANSCRIPTS_DIR.mkdir(exist_ok=True)
 
 class Assistant(Agent):
-    def __init__(self, research_session: ResearchSession = None) -> None:
-        instructions = """You are a research-focused voice AI assistant.
-
-When users ask questions:
-1. Answer simple questions directly from your knowledge
-2. For questions needing current data or research, the agent will trigger research mode
-3. During research, you'll ask clarifying questions to understand better
-4. Provide concise, conversational responses suitable for voice
-
-Be helpful, clear, and brief in your spoken responses."""
+    def __init__(self, research_session: ResearchSession = None, in_research_mode: bool = False) -> None:
+        instructions = """You are a research assistant. When the user asks a question, acknowledge that you will execute a deep research using Valyu and wait for clarifying information. Do not answer their question directly - instead, acknowledge the research request and wait for their responses to clarifying questions."""
         super().__init__(instructions=instructions)
         self.research_session = research_session
+        self.in_research_mode = in_research_mode
 
 server = AgentServer()
 
@@ -53,77 +53,60 @@ async def my_agent(ctx: agents.JobContext):
     json_file = TRANSCRIPTS_DIR / f"history_{ctx.room.name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     conversation_history = []
     research_entries = []
+    pending_tasks = []  # Track async tasks to ensure they complete
+    research_task = None  # Track background research task
 
     async def handle_research_flow(user_query: str) -> bool:
         """
-        Manage the full research conversation flow with voice.
-        Returns True if research was triggered, False if it should use normal LLM.
-
-        CONVERSATION FLOW:
-        1. User: "What's the latest on quantum computing?"
-        2. Agent checks: Does this need research? (Yes)
-        3. Agent says: "Researching..."
-        4. Agent asks: "Question 1 of 3: Theoretical or practical?"
-        5. User: "Theoretical"
-        6. Agent asks: "Question 2 of 3: Recent or foundational?"
-        7. User: "Recent"
-        8. Agent asks: "Question 3 of 3: Your background level?"
-        9. User: "Intermediate"
-        10. Agent says: "Searching..."
-        11. Agent: "Here's what I found: [summary]"
-        12. System: Saves full results to transcript
+        Initiate research flow by acknowledging and executing immediately
         """
-        # Check if research is needed
-        needs_research = await research_session.should_research(user_query)
-        if not needs_research:
-            return False
+        await research_session.initiate_research(user_query)
 
-        # Say we're researching
-        await session.say("Researching...", allow_interruptions=True)
+        # Acknowledge the request
+        await session.generate_reply(
+            instructions="Say something brief like 'Researching that for you...' or 'Let me look into that...' Keep it to one sentence."
+        )
 
-        # Start research and get first question
-        first_question = await research_session.initiate_research(user_query)
-        await session.say(first_question, allow_interruptions=True)
+        # Execute research immediately in background
+        nonlocal research_task
+        research_task = asyncio.create_task(_execute_research_in_background())
+        pending_tasks.append(research_task)
 
         return True
 
+    async def _execute_research_in_background():
+        """Execute research in the background and handle results"""
+        nonlocal research_task
+        try:
+            print(f"DEBUG: Starting background research execution")
+            summary = await research_session.execute_research()
+
+            # Save research to markdown
+            markdown_path = research_session.save_research_as_markdown()
+            if markdown_path:
+                print(f"DEBUG: Research saved to {markdown_path}")
+
+            research_entries.append(research_session.get_transcript_entry())
+
+            # Speak the summary
+            summary_with_note = f"Here's a brief summary of my research: {summary}"
+            await session.say(summary_with_note, allow_interruptions=True)
+
+            research_session.reset()
+            research_task = None
+        except Exception as e:
+            print(f"Research error: {e}")
+            import traceback
+            traceback.print_exc()
+            await session.say("Error during research.", allow_interruptions=True)
+            research_session.reset()
+            research_task = None
+
     async def _handle_user_input(event: UserInputTranscribedEvent):
-        """Async handler for user input - handles research flow."""
-        # Handle research flow based on current state
+        """Async handler for user input - trigger research immediately"""
         if research_session.state == ResearchState.IDLE:
-            # New query - check if research is needed
+            print(f"DEBUG: Triggering research for: {event.transcript}")
             await handle_research_flow(event.transcript)
-
-        elif research_session.state in [
-            ResearchState.ASKING_QUESTION_1,
-            ResearchState.ASKING_QUESTION_2,
-            ResearchState.ASKING_QUESTION_3
-        ]:
-            # Record answer and get next question or trigger search
-            next_prompt = research_session.record_answer(event.transcript)
-
-            if next_prompt:
-                # Ask next question
-                await session.say(next_prompt, allow_interruptions=True)
-            else:
-                # All questions answered - start research
-                await session.say("Searching...", allow_interruptions=True)
-
-                try:
-                    summary = await research_session.execute_research()
-
-                    # Save research to transcript
-                    research_entries.append(research_session.get_transcript_entry())
-
-                    # Speak summary
-                    await session.say(summary, allow_interruptions=True)
-
-                    # Reset for next query
-                    research_session.reset()
-                except Exception as e:
-                    error_msg = f"Sorry, I had trouble researching that. {str(e)}"
-                    await session.say(error_msg, allow_interruptions=True)
-                    research_session.reset()
 
     @session.on("user_input_transcribed")
     def on_user_input_transcribed(event: UserInputTranscribedEvent):
@@ -142,8 +125,9 @@ async def my_agent(ctx: agents.JobContext):
 
         print(f"📝 {entry}")
 
-        # Use asyncio.create_task to run async research flow in background
-        asyncio.create_task(_handle_user_input(event))
+        # Create task and track it to ensure completion
+        task = asyncio.create_task(_handle_user_input(event))
+        pending_tasks.append(task)
 
     @session.on("conversation_item_added")
     def on_conversation_item_added(event: ConversationItemAddedEvent):
@@ -162,6 +146,12 @@ async def my_agent(ctx: agents.JobContext):
 
     async def save_full_history():
         """Save complete conversation history as JSON when session ends."""
+        # Wait for any pending research tasks to complete
+        if pending_tasks:
+            print(f"DEBUG: Waiting for {len(pending_tasks)} pending tasks...")
+            await asyncio.gather(*pending_tasks, return_exceptions=True)
+            print(f"DEBUG: All pending tasks completed")
+
         try:
             history_dict = session.history.to_dict()
 
@@ -189,9 +179,10 @@ async def my_agent(ctx: agents.JobContext):
         ),
     )
 
-    await session.generate_reply(
-        instructions="Greet the user and offer your assistance. You should start by speaking in English."
-    )
+    # Don't generate initial greeting - wait for user input to trigger research
+    # await session.generate_reply(
+    #     instructions="Greet the user and offer your assistance. You should start by speaking in English."
+    # )
 
 
 if __name__ == "__main__":

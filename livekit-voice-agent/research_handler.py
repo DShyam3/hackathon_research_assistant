@@ -1,9 +1,9 @@
 import os
 import json
-import re
 from typing import Optional
 from datetime import datetime
 from enum import Enum
+from pathlib import Path
 from openai import OpenAI
 from valyu import Valyu
 
@@ -11,16 +11,14 @@ from valyu import Valyu
 class ResearchState(Enum):
     """Enum for research conversation states"""
     IDLE = "idle"
-    GENERATING_QUESTIONS = "generating_questions"
-    ASKING_QUESTION_1 = "asking_question_1"
-    ASKING_QUESTION_2 = "asking_question_2"
-    ASKING_QUESTION_3 = "asking_question_3"
+    ASKING_QUESTIONS = "asking_questions"
+    COLLECTING_ANSWERS = "collecting_answers"
     RESEARCHING = "researching"
     DELIVERING_RESULTS = "delivering_results"
 
 
 class ResearchSession:
-    """Manages a research session including clarifying questions and Valyu search"""
+    """Manages a research session with Valyu search"""
 
     def __init__(self, session_id: str):
         self.session_id = session_id
@@ -30,178 +28,132 @@ class ResearchSession:
         self.user_answers = []
         self.research_results = None
         self.research_summary = ""
+        self.answer_count = 0
+
+        # Create research output directory
+        self.research_dir = Path("research_results")
+        self.research_dir.mkdir(exist_ok=True)
 
         # Initialize API clients
+        print(f"DEBUG: Initializing ResearchSession with id: {session_id}")
         self.openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         self.valyu_client = Valyu(api_key=os.getenv("VALYU_API_KEY"))
+        print(f"DEBUG: API clients initialized")
 
     async def should_research(self, query: str) -> bool:
-        """Use LLM to determine if query needs research or can be answered directly"""
-        prompt = f"""Does this question require current information, recent data, or research?
-Answer with only 'yes' or 'no'.
-
-Question: {query}"""
-
-        try:
-            response = self.openai_client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=10,
-                temperature=0.3  # Lower temperature for consistent yes/no
-            )
-
-            answer = response.choices[0].message.content.strip().lower()
-            return answer.startswith('yes')
-        except Exception as e:
-            print(f"Error in should_research: {e}")
-            return False
-
-    def get_voice_status_updates(self) -> dict:
-        """Return minimal status messages for each research state"""
-        return {
-            ResearchState.IDLE: None,
-            ResearchState.GENERATING_QUESTIONS: "Researching...",
-            ResearchState.ASKING_QUESTION_1: None,  # Question itself is the update
-            ResearchState.ASKING_QUESTION_2: None,
-            ResearchState.ASKING_QUESTION_3: None,
-            ResearchState.RESEARCHING: "Searching...",
-            ResearchState.DELIVERING_RESULTS: None   # Summary is the update
-        }
+        """Always force research for all queries - no LLM fallback"""
+        return True
 
     async def initiate_research(self, query: str) -> str:
-        """Start research process and generate first clarifying question"""
+        """Start research immediately - no clarifying questions"""
         self.original_query = query
-        self.state = ResearchState.GENERATING_QUESTIONS
+        self.state = ResearchState.RESEARCHING
+        self.user_answers = []
+        self.answer_count = 0
 
-        # Generate 3 clarifying questions
-        self.clarifying_questions = await self._generate_questions(query)
-
-        # Move to asking first question
-        self.state = ResearchState.ASKING_QUESTION_1
-        self.user_answers = [None, None, None]
-
-        return f"I'll research that for you. Let me ask a few clarifying questions to give you the best results. Question 1 of 3: {self.clarifying_questions[0]}"
-
-    async def _generate_questions(self, query: str) -> list[str]:
-        """Generate 3 short clarifying questions using OpenAI - max 10 words each for voice"""
-        prompt = f"""Generate exactly 3 SHORT clarifying questions (max 10 words each) for voice conversation.
-Make them simple, conversational, and easy to understand when spoken.
-Return ONLY the questions, one per line, without numbering.
-
-Topic: {query}"""
-
-        response = self.openai_client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=150,
-            temperature=0.7
-        )
-
-        # Parse the response to extract questions
-        text = response.choices[0].message.content
-        questions = [q.strip() for q in text.split('\n') if q.strip()]
-        return questions[:3]  # Ensure we have exactly 3
+        # Skip questions, go straight to research
+        return None
 
     def record_answer(self, answer: str) -> Optional[str]:
-        """Record user's answer to current question and move to next or research"""
-        current_question_index = {
-            ResearchState.ASKING_QUESTION_1: 0,
-            ResearchState.ASKING_QUESTION_2: 1,
-            ResearchState.ASKING_QUESTION_3: 2,
-        }.get(self.state)
+        """Record user's answer and proceed to research after 1 answer"""
+        if self.state != ResearchState.COLLECTING_ANSWERS:
+            return None
 
-        if current_question_index is not None:
-            self.user_answers[current_question_index] = answer
+        self.user_answers[self.answer_count] = answer
+        self.answer_count += 1
 
-            if current_question_index == 0:
-                self.state = ResearchState.ASKING_QUESTION_2
-                return f"Question 2 of 3: {self.clarifying_questions[1]}"
-            elif current_question_index == 1:
-                self.state = ResearchState.ASKING_QUESTION_3
-                return f"Question 3 of 3: {self.clarifying_questions[2]}"
-            elif current_question_index == 2:
-                # All questions answered, move to research
-                self.state = ResearchState.RESEARCHING
-                return None  # Signal to start research
+        if self.answer_count >= 1:
+            self.state = ResearchState.RESEARCHING
+            return None  # Signal to start research
 
         return None
 
     async def execute_research(self) -> str:
-        """Execute Valyu search with enhanced query from clarifying questions"""
+        """Execute Valyu search with robust error handling"""
         self.state = ResearchState.RESEARCHING
 
         # Build enhanced search query from answers
         enhanced_query = self._build_enhanced_query()
+        print(f"DEBUG: Enhanced query for Valyu: {enhanced_query}")
 
         try:
-            # Execute Valyu search
-            response = self.valyu_client.search(
-                enhanced_query,
-                search_type="proprietary",
-                max_num_results=10,
-                max_price=30,
-                relevance_threshold=0.5,
-                included_sources=["valyu/valyu-arxiv", "valyu/valyu-pubmed"],
-                is_tool_call=True
-            )
+            # Execute Valyu search with retries
+            print(f"DEBUG: Calling Valyu search...")
+            response = await self._search_with_retry(enhanced_query)
+
+            if not response or not hasattr(response, 'results') or not response.results:
+                return "I couldn't find results for that query. Try asking again differently."
 
             self.research_results = response
 
             # Generate summary for voice delivery
             self.research_summary = await self._generate_summary()
-
             self.state = ResearchState.DELIVERING_RESULTS
             return self.research_summary
 
         except Exception as e:
-            return f"I encountered an error while researching: {str(e)}"
+            error_msg = str(e)
+            print(f"Error in execute_research: {error_msg}")
+            return f"I encountered an error. {error_msg[:50]}"
+
+    async def _search_with_retry(self, query: str, retries: int = 2):
+        """Execute Valyu search with retry logic"""
+        for attempt in range(retries):
+            try:
+                print(f"DEBUG: Valyu search attempt {attempt + 1} for query: {query}")
+                response = self.valyu_client.search(
+                    query,
+                    search_type="proprietary",
+                    max_num_results=10,
+                    max_price=30,
+                    relevance_threshold=0.5,
+                    included_sources=["valyu/valyu-arxiv", "valyu/valyu-pubmed"],
+                    is_tool_call=True
+                )
+                print(f"DEBUG: Valyu search successful, got response")
+                return response
+            except Exception as e:
+                print(f"Valyu search attempt {attempt + 1} failed: {e}")
+                if attempt < retries - 1:
+                    import asyncio
+                    await asyncio.sleep(1)
+                else:
+                    raise
 
     def _build_enhanced_query(self) -> str:
-        """Build enhanced search query combining original question with answers"""
-        query_parts = [self.original_query]
-
-        if self.user_answers[0]:
-            query_parts.append(self.user_answers[0])
-        if self.user_answers[1]:
-            query_parts.append(self.user_answers[1])
-        if self.user_answers[2]:
-            query_parts.append(self.user_answers[2])
-
-        return " ".join(query_parts)
+        """Build search query from original question and answer"""
+        parts = [self.original_query]
+        if self.user_answers and self.user_answers[0]:
+            parts.append(self.user_answers[0])
+        return " ".join(parts)
 
     async def _generate_summary(self) -> str:
-        """Generate concise summary of research results for voice delivery"""
-        if not self.research_results or not self.research_results.get("results"):
-            return "I wasn't able to find specific results for that query."
+        """Generate concise summary of research results"""
+        if not self.research_results or not hasattr(self.research_results, 'results') or not self.research_results.results:
+            return "No results found for that query."
 
-        # Extract top 3 results
-        top_results = self.research_results["results"][:3]
-        results_text = "\n".join([
-            f"- {r.get('title', 'Unknown')}: {r.get('content', '')[:150]}..."
-            for r in top_results
-        ])
+        try:
+            # Extract top 2 results for summary
+            top_results = self.research_results.results[:2]
+            results_text = "\n".join([
+                f"- {getattr(r, 'title', 'N/A')}: {r.content[:100] if hasattr(r, 'content') and r.content else 'N/A'}"
+                for r in top_results
+            ])
 
-        prompt = f"""Create a brief, conversational 2-3 point summary (suitable for voice delivery)
-from these research results. Focus on the most important insights. Do NOT mention sources or URLs.
+            prompt = f"""Summarize in 2 sentences maximum.
 
-Results:
 {results_text}"""
 
-        response = self.openai_client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=200,
-            temperature=0.7
-        )
-
-        summary = response.choices[0].message.content
-        return f"Here's what I found: {summary}"
+            response = self.openai_client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=100,
+                temperature=0.7
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"Error generating summary: {e}")
+            return "I found results but couldn't summarize them."
 
     def get_transcript_entry(self) -> dict:
         """Generate transcript entry with full research details"""
@@ -218,24 +170,94 @@ Results:
 
     def _format_detailed_results(self) -> list[dict]:
         """Format detailed research results for transcript"""
-        if not self.research_results or not self.research_results.get("results"):
+        if not self.research_results or not hasattr(self.research_results, 'results') or not self.research_results.results:
             return []
 
         formatted = []
-        for result in self.research_results["results"]:
+        for result in self.research_results.results:
             formatted.append({
-                "title": result.get("title"),
-                "url": result.get("url"),
-                "source": result.get("source"),
-                "content_preview": result.get("content", "")[:300],
-                "relevance_score": result.get("relevance_score"),
-                "authors": result.get("authors"),
-                "publication_date": result.get("publication_date"),
-                "doi": result.get("doi"),
-                "citation_count": result.get("citation_count")
+                "title": getattr(result, 'title', 'N/A'),
+                "url": getattr(result, 'url', 'N/A'),
+                "source": getattr(result, 'source', 'N/A'),
+                "content_preview": result.content[:300] if hasattr(result, 'content') and result.content else "",
+                "relevance_score": getattr(result, 'relevance_score', None),
+                "authors": getattr(result, 'authors', None),
+                "publication_date": getattr(result, 'publication_date', None),
+                "doi": getattr(result, 'doi', None),
+                "citation_count": getattr(result, 'citation_count', None)
             })
 
         return formatted
+
+    def save_research_as_markdown(self) -> Optional[str]:
+        """Save research results to a markdown file and return the file path"""
+        if not self.research_results or not hasattr(self.research_results, 'results'):
+            print("No research results to save")
+            return None
+
+        try:
+            # Create filename based on timestamp and query
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            query_slug = self.original_query[:30].replace(" ", "_")
+            filename = f"research_{timestamp}_{query_slug}.md"
+            filepath = self.research_dir / filename
+
+            # Build markdown content
+            markdown_content = self._generate_markdown_content()
+
+            # Write to file
+            with open(filepath, "w", encoding="utf-8") as f:
+                f.write(markdown_content)
+
+            print(f"✅ Research saved to {filepath}")
+            return str(filepath)
+
+        except Exception as e:
+            print(f"Error saving research to markdown: {e}")
+            return None
+
+    def _generate_markdown_content(self) -> str:
+        """Generate markdown formatted research content"""
+        lines = []
+
+        # Header
+        lines.append("# Research Results\n")
+        lines.append(f"**Query:** {self.original_query}\n")
+
+        if self.user_answers and self.user_answers[0]:
+            lines.append(f"**Clarification:** {self.user_answers[0]}\n")
+
+        lines.append(f"**Timestamp:** {datetime.now().isoformat()}\n")
+        lines.append(f"**Summary:** {self.research_summary}\n")
+
+        # Detailed Results
+        lines.append("\n## Detailed Results\n")
+
+        if self.research_results and hasattr(self.research_results, 'results') and self.research_results.results:
+            for i, result in enumerate(self.research_results.results, 1):
+                lines.append(f"\n### Result {i}\n")
+                lines.append(f"**Title:** {getattr(result, 'title', 'N/A')}\n")
+
+                if hasattr(result, 'url') and result.url:
+                    lines.append(f"**URL:** {result.url}\n")
+
+                lines.append(f"**Source:** {getattr(result, 'source', 'N/A')}\n")
+
+                if hasattr(result, 'content') and result.content:
+                    lines.append(f"\n**Content:**\n{result.content}\n")
+
+                if hasattr(result, 'authors') and result.authors:
+                    lines.append(f"**Authors:** {result.authors}\n")
+
+                if hasattr(result, 'publication_date') and result.publication_date:
+                    lines.append(f"**Published:** {result.publication_date}\n")
+
+                if hasattr(result, 'citation_count') and result.citation_count:
+                    lines.append(f"**Citations:** {result.citation_count}\n")
+        else:
+            lines.append("\nNo results found.\n")
+
+        return "".join(lines)
 
     def reset(self):
         """Reset session for new research query"""
@@ -245,3 +267,4 @@ Results:
         self.user_answers = []
         self.research_results = None
         self.research_summary = ""
+        self.answer_count = 0

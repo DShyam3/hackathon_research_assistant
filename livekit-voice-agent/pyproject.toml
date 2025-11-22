@@ -9,4 +9,5 @@ dependencies = [
     "langchain-valyu",
     "langchain",
     "openai>=1.0.0",
+    "valyu>=2.2.6",
 ]
