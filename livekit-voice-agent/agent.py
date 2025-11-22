@@ -133,6 +133,10 @@ async def my_agent(ctx: agents.JobContext):
     @session.on("conversation_item_added")
     def on_conversation_item_added(event: ConversationItemAddedEvent):
         """Log agent responses when added to conversation."""
+        # Skip user messages - they're already logged in on_user_input_transcribed
+        if event.item.role.lower() == "user":
+            return
+        
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         role = event.item.role.upper()
         text = event.item.text_content or "[audio response]"
