@@ -58,20 +58,14 @@ async def my_agent(ctx: agents.JobContext):
 
     async def handle_research_flow(user_query: str) -> bool:
         """
-        Execute research immediately - speak and research in parallel
+        Execute research immediately without acknowledgment
         """
         await research_session.initiate_research(user_query)
         
-        # Start research task FIRST (don't await)
+        # Start research task immediately
         nonlocal research_task
         research_task = asyncio.create_task(_execute_research_in_background())
         pending_tasks.append(research_task)
-        
-        # Then acknowledge - this happens in parallel with research
-        await session.say(
-            "Researching now.",
-            allow_interruptions=True
-        )
         
         return True
 
@@ -105,7 +99,12 @@ async def my_agent(ctx: agents.JobContext):
 
     async def _handle_user_input(event: UserInputTranscribedEvent):
         """Handle user input - execute research immediately"""
-        if research_session.state == ResearchState.IDLE:
+        nonlocal research_task
+        
+        # Only trigger research if:
+        # 1. Session is idle (not already researching)
+        # 2. No research task is currently running
+        if research_session.state == ResearchState.IDLE and research_task is None:
             print(f"DEBUG: Initiating research for: {event.transcript}")
             await handle_research_flow(event.transcript)
 
@@ -184,10 +183,11 @@ async def my_agent(ctx: agents.JobContext):
         ),
     )
 
-    # Don't generate initial greeting - wait for user input to trigger research
-    # await session.generate_reply(
-    #     instructions="Greet the user and offer your assistance. You should start by speaking in English."
-    # )
+    # Generate simple welcome message
+    await session.say(
+        "What can I help you research today?",
+        allow_interruptions=True
+    )
 
 
 if __name__ == "__main__":

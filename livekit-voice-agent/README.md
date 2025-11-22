@@ -58,28 +58,29 @@ uv run agent.py start
 
 **Simple and direct:**
 
-1. User asks a question
-2. Agent says "Researching now"
-3. Research executes immediately using Valyu web search
-4. Agent delivers detailed summary
+1. Agent greets: "What can I help you research today?"
+2. User asks a question
+3. Research executes immediately (no acknowledgment needed)
+4. Agent delivers detailed summary when complete
 5. Full results saved to `research_results/` folder
 
 ### Example
 
 ```
-User: "What are the latest AI developments?"
+Agent: "What can I help you research today?"
 
-Agent: "Researching now."
+User: "Tell me about the latest AI developments"
 
-[Research executes in background]
+[Research executes - typically 10-20 seconds]
 
 Agent: "Research complete. Recent developments include breakthrough 
        advances in quantum computing error correction by MIT researchers, 
        IBM's 1000-qubit processor announcement, and new frameworks for 
-       orchestrating multi-agent systems. The full results have been 
-       saved and are available."
+       orchestrating multi-agent systems. These innovations are driving 
+       significant progress in both hardware capabilities and software 
+       infrastructure. The full results have been saved and are available."
 
-[Results saved to research_results/research_20251122_152344_What_are_the_latest.md]
+[Results saved to research_results/research_20251122_152344_Tell_me_about.md]
 ```
 
 ## Features
