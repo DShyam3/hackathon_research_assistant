@@ -1,0 +1,195 @@
+{
+  "items": [
+    {
+      "id": "item_5cb2e637bb4a",
+      "type": "agent_handoff",
+      "new_agent_id": "assistant"
+    },
+    {
+      "id": "item_5b15aa9ec7c0",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Hello! How can I assist you today?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763821758.428991,
+        "stopped_speaking_at": 1763821760.9374652,
+        "llm_node_ttft": 0.7296373749850318,
+        "tts_node_ttfb": 0.2851764999795705
+      }
+    },
+    {
+      "id": "item_a28df88b98b2",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Tell me the latest information on mlms that are open source from"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8021557500000002,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 4.582980182021856e-06
+      }
+    },
+    {
+      "id": "item_d299370d962c",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I'll research that for you. Let me ask a couple of clarifying questions. Question 1 of 2: What specific open-source ML models are you interested in?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_f0698e3c5a31",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Quinn."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.765505,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 1.5829864423722029e-06
+      }
+    },
+    {
+      "id": "item_ad2f1f6bb191",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "To make sure I provide the most relevant information, could you please clarify what you mean by \"mlms\"? Are you referring to multi-level marketing systems, machine learning models, or something else?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763821770.515378,
+        "stopped_speaking_at": 1763821780.4541419,
+        "llm_node_ttft": 0.3711483329825569,
+        "tts_node_ttfb": 0.5688662500178907
+      }
+    },
+    {
+      "id": "item_b414ae00e980",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Question 2 of 2: Are you looking for tools or frameworks for ML?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_ab88606d7a94",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Just to clarify, are you asking about an open-source ML model named \"Quinn,\" or did you mean something else related to MLMs? Could you please confirm?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763821783.7841861,
+        "stopped_speaking_at": 1763821789.3173718,
+        "llm_node_ttft": 0.4294411670125555,
+        "tts_node_ttfb": 0.6655558750208002
+      }
+    },
+    {
+      "id": "item_fba4264266f8",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Searching..."
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_9889111c17b1",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Booth to try and get"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8096794,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 1.6660196706652641e-06
+      }
+    },
+    {
+      "id": "item_f2e2dda0dc1b",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I wasn't able to find specific results for that query."
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_8852498211fe",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Speaking of background"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.7718376666666668,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 8.750066626816988e-07
+      }
+    },
+    {
+      "id": "item_8fcdf5ba0ca5",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Could you please clarify your question about \"speaking of background\"? Are you asking about background information on a specific topic?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763821799.9240909,
+        "stopped_speaking_at": 1763821805.622568,
+        "llm_node_ttft": 0.44504466699436307,
+        "tts_node_ttfb": 0.41264649998629466
+      }
+    }
+  ],
+  "research_sessions": [
+    {
+      "timestamp": "2025-11-22T14:29:57.482123",
+      "type": "research_session",
+      "session_id": "mock_room",
+      "original_query": "Tell me the latest information on mlms that are open source from",
+      "clarifying_questions": [
+        "What specific open-source ML models are you interested in?",
+        "Are you looking for tools or frameworks for ML?"
+      ],
+      "user_answers": [
+        "Quinn.",
+        "Booth to try and get"
+      ],
+      "research_summary": "I wasn't able to find specific results for that query.",
+      "detailed_results": []
+    }
+  ]
+}

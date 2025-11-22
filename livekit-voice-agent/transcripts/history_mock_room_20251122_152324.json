@@ -1,0 +1,271 @@
+{
+  "items": [
+    {
+      "id": "item_b926949c869a",
+      "type": "agent_handoff",
+      "new_agent_id": "assistant"
+    },
+    {
+      "id": "item_8bf17e8e598b",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I'll research that for you."
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_df1509a7e43e",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Tell me the latest information about ai agents and llms and what is the best open source frameworks to do this"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8948569523809523,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 2.375018084421754e-06
+      }
+    },
+    {
+      "id": "item_16aba9923bd9",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Researching the latest information on AI agents, large language models (LLMs), and the best open-source frameworks for development now."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763825025.336066,
+        "stopped_speaking_at": 1763825032.673961,
+        "llm_node_ttft": 0.7692168329958804,
+        "tts_node_ttfb": 0.5591868330084253
+      }
+    },
+    {
+      "id": "item_d037ba1f9d76",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Research complete. The research findings highlight that AI agents are transitioning from experimental prototypes to integral components of business infrastructure, facilitating automation, scalability, and enhanced customer interactions. In 2025, open-source large language models (LLMs) have achieved significant performance improvements, marking them as essential tools for developers in creating innovative AI solutions. Furthermore, the emergence of multi-agent frameworks emphasizes the growing complexity and capabilities of AI applications, allowing for the development of sophisticated systems capable of solving intricate problems through collaborative efforts. Overall, these developments signal a pivotal shift in how enterprises leverage AI technology to drive operational efficiency and service delivery. The full results have been saved and are available."
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_36593c2c5793",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Commit Everything"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.7129045,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 1.0840012691915035e-06
+      }
+    },
+    {
+      "id": "item_7020884fce96",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "All gathered information and research results have been committed and saved successfully. If you need anything else, feel free to ask!"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763825060.6066911,
+        "stopped_speaking_at": 1763825060.808726,
+        "llm_node_ttft": 0.8094545830099378,
+        "tts_node_ttfb": 0.3884612090187147
+      }
+    }
+  ],
+  "research_sessions": [
+    {
+      "timestamp": "2025-11-22T15:23:44.005417",
+      "type": "research_session",
+      "session_id": "mock_room",
+      "original_query": "Tell me the latest information about ai agents and llms and what is the best open source frameworks to do this",
+      "clarifying_questions": [],
+      "user_answers": [],
+      "research_summary": "The research findings highlight that AI agents are transitioning from experimental prototypes to integral components of business infrastructure, facilitating automation, scalability, and enhanced customer interactions. In 2025, open-source large language models (LLMs) have achieved significant performance improvements, marking them as essential tools for developers in creating innovative AI solutions. Furthermore, the emergence of multi-agent frameworks emphasizes the growing complexity and capabilities of AI applications, allowing for the development of sophisticated systems capable of solving intricate problems through collaborative efforts. Overall, these developments signal a pivotal shift in how enterprises leverage AI technology to drive operational efficiency and service delivery.",
+      "detailed_results": [
+        {
+          "title": "AI Agent Technology Trends 2025: Tools, Frameworks, and What’s Next | The AI Journal",
+          "url": "https://aijourn.com/ai-agent-technology-trends-2025-tools-frameworks-and-whats-next/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "AI agents are rapidly moving from prototypes to production, reshaping how businesses automate, scale, and interact with customers. From workflow orchestration to multimodal assistants, “agentic AI” is no longer a lab experiment — it’s the foundation of a new enterprise infrastructure.\n\nTo understand",
+          "relevance_score": 0.97,
+          "authors": null,
+          "publication_date": "2025-11-18",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Best Open Source LLMs in 2025: Top Picks for Developers",
+          "url": "https://valanor.co/best-open-source-llm/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Back to Insights\n\n- 30.07.2025\n- AI\n- [Stefan Medjedovic](https://valanor.co/author/stefan/)\n\n# Best Open‑Source LLMs in 2025\n\n## Table of Contents\n\nOpen‑source large language models ([LLMs](https://valanor.co/what-is-large-language-model-llm/)) reached new levels of performance in 2025. Today’s mod",
+          "relevance_score": 0.97,
+          "authors": null,
+          "publication_date": "2025-11-19",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "The 4 Best Open-Source Multi-Agent AI Frameworks in 2025 | by Emma Kirsten | Coding Nexus | Nov, 2025 | Medium",
+          "url": "https://medium.com/coding-nexus/the-4-best-open-source-multi-agent-ai-frameworks-in-2025-81e92f23f866?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "## Coding Nexus\n\nCoding Nexus is a community of developers, tech enthusiasts, and aspiring coders. Whether you’re exploring the depths of Python, diving into data science, mastering web development, or staying updated on the latest trends in AI, Coding Nexus has something for you.\n\nMember-only story",
+          "relevance_score": 0.97,
+          "authors": null,
+          "publication_date": "2025-11-19",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Top 10 Agentic AI Frameworks to build AI Agents in 2026 | by javinpaul | Javarevisited | Nov, 2025 | Medium",
+          "url": "https://medium.com/javarevisited/top-10-agentic-ai-frameworks-to-build-ai-agents-in-2026-290618402302?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "## Javarevisited\n\nA humble place to learn Java and Programming better.\n\n# Top 10 Agentic AI Frameworks to build AI Agents in 2026\n\n## Crew AI or Microsoft Autogen? here are top 10 Agentic AI framework developer should know to build production quality AI agents\n\n--\n\nHello guys, Agentic AI, systems of",
+          "relevance_score": 0.97,
+          "authors": null,
+          "publication_date": "2025-11-05",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Best 5 Frameworks To Build Multi-Agent AI Applications",
+          "url": "https://getstream.io/blog/multiagent-ai-frameworks/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Best 5 Frameworks To Build Multi-Agent AI Applications\n\nAINew17 min read\n\nAgents are LLM-based assistants that help solve complex problems in steps.\n\nAmos G.Published November 12, 2025\n\nThis article aims to help you build AI agents powered by memory, knowledgebase, tools, and reasoning and chat with",
+          "relevance_score": 0.97,
+          "authors": null,
+          "publication_date": "2025-11-12",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "15 Best Open Source LLMs In 2025 (With Real-World GPU Sizing Guide)",
+          "url": "https://acecloud.ai/blog/best-open-source-llms/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "If you are evaluating open source LLMs in 2025, you are probably juggling three pressures at once.\n\nYour teams want powerful models for agents, copilots and RAG. Your CFO wants predictable AI costs. Your security and compliance teams want more control than they get from public APIs.\n\nOpen source and",
+          "relevance_score": 0.97,
+          "authors": null,
+          "publication_date": "2025-11-18",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Building AI Agents with Google Gemini 3 and Open Source Frameworks - Google Developers Blog",
+          "url": "https://developers.googleblog.com/building-ai-agents-with-google-gemini-3-and-open-source-frameworks/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "# Building AI Agents with Google Gemini 3 and Open Source Frameworks\n\n- Facebook\n\n- Twitter\n\n- LinkedIn\n\n- Mail\n\nThe world of AI agents is rapidly evolving from simple chatbots to sophisticated, (semi)-autonomous systems that can make complex decisions in the real-world. This week, we introduced Gem",
+          "relevance_score": 0.97,
+          "authors": null,
+          "publication_date": "2025-11-19",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Can an open-source framework solve AI agent complexity?",
+          "url": "https://www.developer-tech.com/news/can-open-source-framework-solve-ai-agent-complexity/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Architecture & Methods, Build & Ship, Editorial, Frameworks & Libraries, Open-Source, Platforms\n\n# Can an open-source framework solve AI agent complexity?\n\nRyan Daws\n\n28th October 2025\n\nShare this story:\n\nTags:\n\n## agentic aiagentsAIartificial intelligencecodingdevelopmenteclipse foundationopen-sour",
+          "relevance_score": 0.9698456576980046,
+          "authors": null,
+          "publication_date": "2025-10-28",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Top 7 Frameworks for Building AI Agents in 2025",
+          "url": "https://www.analyticsvidhya.com/blog/2024/07/ai-agent-frameworks/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Master Generative AI with 10+ Real-world Projects in 2025!\n\n<div class=\"d-flex align-items-center\">\n\n- d - h - m - s\n\nDownload Projects\n\n</div>\n\nInterview PrepCareerGenAIPrompt EnggChatGPTLLMLangchainRAGAI AgentsMachine LearningDeep LearningGenAI ToolsLLMOpsPythonNLPSQLAIML Projects\n\nLeft Side Bar\n\n",
+          "relevance_score": 0.9639788367294667,
+          "authors": null,
+          "publication_date": "2025-11-14",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "10 Multi-Agent AI Frameworks Tested: Tier List from Learning to Production (2025) | LLM Practical Experience Hub",
+          "url": "https://langcopilot.com/posts/2025-11-01-top-multi-agent-ai-frameworks-2024-guide?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "## Agent Technology Hub\n\nBuild intelligent agent systems\n\nReady to build with multi-agent AI but overwhelmed by the sheer number of frameworks? You're not alone. Choosing the right multi-agent AI framework is the critical first step toward success. To cut through the noise, we've benchmarked the top",
+          "relevance_score": 0.9632237201607089,
+          "authors": null,
+          "publication_date": "2025-11-22",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "A Detailed Comparison of Top 6 AI Agent Frameworks in 2025",
+          "url": "https://www.turing.com/resources/ai-agent-frameworks?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "- LangGraphLangGraph platformHow LangGraph worksKey features and benefitsLimitations\n\n- LangGraph platform\n\n- How LangGraph works\n\n- Key features and benefits\n\n- Limitations\n\n- LlamaIndexIndexing techniquesKey features and benefitsLimitations\n\n- Indexing techniques\n\n- Key features and benefits\n\n- Li",
+          "relevance_score": 0.9603759785967332,
+          "authors": null,
+          "publication_date": "2025-11-15",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "8 Best Multi-Agent AI Frameworks for 2025",
+          "url": "https://www.multimodal.dev/post/best-multi-agent-ai-frameworks?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "# 8 Best Multi-Agent AI Frameworks for 2025\n\nBuilding AI-powered solutions that can reason, plan, and execute tasks autonomously requires more than a single AI Agent.\n\nMulti-agent AI frameworks allow multiple AI Agents to collaborate, adapt, plan, and solve complex problems efficiently. By enabling ",
+          "relevance_score": 0.9541530533370246,
+          "authors": null,
+          "publication_date": "2025-11-20",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Top 19 Open-Source LLMs to Watch in 2025 - DevToolHub",
+          "url": "https://devtoolhub.com/best-open-source-llms-2025/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Over the last few months, I’ve noticed something exciting happening in the AI world.While big names like GPT-4, Claude, and Gemini continue to dominate the headlines, open-source models have quietly caught up — and in some areas, they’re outperforming them.\n\nIf 2024 was the year open-source AI prove",
+          "relevance_score": 0.9380284458203513,
+          "authors": null,
+          "publication_date": "2025-10-27",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Announcing the Agent Development Kit for Go: Build Powerful AI Agents with Your Favorite Languages - Google Developers Blog",
+          "url": "https://developers.googleblog.com/en/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "# Announcing the Agent Development Kit for Go: Build Powerful AI Agents with Your Favorite Languages\n\n- Facebook\n\n- Twitter\n\n- LinkedIn\n\n- Mail\n\nToday, we are thrilled to add Go to the Agent Development Kit (ADK) family of supported languages! We want to meet you as the builders, where you are so yo",
+          "relevance_score": 0.8648538145709664,
+          "authors": null,
+          "publication_date": "2025-11-07",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Top 10 open source LLMs for 2025",
+          "url": "https://www.instaclustr.com/education/open-source-ai/top-10-open-source-llms-for-2025/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "# Top 10 open source LLMs for 2025\n\nLarge Language Models (LLMs) are machine learning models that can understand and generate human language based on large-scale datasets.\n\n## What are open source LLMs?\n\nLarge Language Models (LLMs) are machine learning models that can understand and generate human ",
+          "relevance_score": 0.8557163530803108,
+          "authors": null,
+          "publication_date": "2025-10-29",
+          "doi": null,
+          "citation_count": null
+        }
+      ]
+    }
+  ]
+}

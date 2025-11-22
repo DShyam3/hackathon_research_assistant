@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "id": "item_1f6446b91d2b",
+      "type": "agent_handoff",
+      "new_agent_id": "assistant"
+    },
+    {
+      "id": "item_cd7df73078bb",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Hello! I'm here to help you with any research or information you need. What topic are you curious about today?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763818962.732864,
+        "stopped_speaking_at": 1763818969.33048,
+        "llm_node_ttft": 0.8115983750030864,
+        "tts_node_ttfb": 0.7042692500108387
+      }
+    },
+    {
+      "id": "item_68c248164ed3",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Latest ai chip"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8180293333333334,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 7.708993507549167e-06
+      }
+    },
+    {
+      "id": "item_6a9c5fe18eb2",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Got it—are you interested in the very latest AI chips designed for specific uses like deep learning, edge computing, or general AI acceleration? Also, would you prefer consumer-level chips (like those for smartphones or PCs) or enterprise-grade chips used in data centers?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763818973.4737542,
+        "stopped_speaking_at": 1763818988.288495,
+        "llm_node_ttft": 0.7734658330155071,
+        "tts_node_ttfb": 0.8831372919958085
+      }
+    },
+    {
+      "id": "item_c752c9a5ee44",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "For consumer hardware to run llms."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.9249268333333335,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 6.291986210271716e-06
+      }
+    },
+    {
+      "id": "item_5ddd125193a8",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Thanks for clarifying! For consumer hardware aiming to run large language models (LLMs), some of the latest AI chips focus on enabling on-device inference with efficiency and speed. A few notable examples as of mid-2024 include:\n\n1. **Apple M2 Pro and M2 Max** – These chips feature Neural Engines optimized for ML tasks, including running LLMs locally with good power efficiency, especially in MacBooks.\n\n2. **NVIDIA RTX 40-series GPUs** – While often used in desktops, these GPUs (like the RTX 4090) are popular for accelerating LLM inference on high-end consumer machines.\n\n3. **Google Tensor G3** (in Pixel 8 phones) – Tailored for edge AI workloads, it includes specialized ML accelerators to handle models like LLMs efficiently on mobile.\n\n4. **Qualcomm Snapdragon 8 Gen 3** – Integrated AI accelerators allow smartphones to run smaller or optimized LLMs on-device.\n\nAre you interested in recommendations for a specific device type (e.g., laptop, smartphone), or more details on how these chips handle LLMs?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763819009.0531058,
+        "stopped_speaking_at": 1763819026.264626,
+        "llm_node_ttft": 1.0218700419936795,
+        "tts_node_ttfb": 0.3231203749892302
+      }
+    }
+  ]
+}

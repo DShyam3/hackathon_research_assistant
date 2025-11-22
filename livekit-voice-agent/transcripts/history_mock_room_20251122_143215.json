@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "id": "item_c4e901cf8295",
+      "type": "agent_handoff",
+      "new_agent_id": "assistant"
+    },
+    {
+      "id": "item_b303c6ba0131",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Hello! How can I assist you today?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763821937.419795,
+        "stopped_speaking_at": 1763821938.692372,
+        "llm_node_ttft": 1.2729776669875719,
+        "tts_node_ttfb": 0.3473696250002831
+      }
+    },
+    {
+      "id": "item_a5912c368286",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "So do some"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.615383,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 1.8750142771750689e-06
+      }
+    },
+    {
+      "id": "item_115aab709b9a",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Could you please clarify what you’d like me to do? Are you asking for some information, help with a task, or something else?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763821940.685919,
+        "stopped_speaking_at": 1763821946.770635,
+        "llm_node_ttft": 0.43974370800424367,
+        "tts_node_ttfb": 0.3669231249950826
+      }
+    },
+    {
+      "id": "item_6c9baa678fc8",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Help me do some research on large language models and get this done and it should be small four billion parameter models."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8868460909090911,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 9.170034900307655e-07
+      }
+    },
+    {
+      "id": "item_ab9bb86882a4",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Got it! You're interested in research about large language models that have around four billion parameters—small compared to huge models like GPT-4.\n\nTo help you best, could you specify what aspects you want to focus on? For example:\n- Performance benchmarks of 4B parameter models?\n- Architectures commonly used with that size?\n- Applications or use cases?\n- Training datasets and compute resources required?\n\nThis will help me tailor the research to your needs!"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763821961.529481,
+        "stopped_speaking_at": 1763821986.190082,
+        "llm_node_ttft": 0.5212067920074333,
+        "tts_node_ttfb": 0.7762803330260795
+      }
+    },
+    {
+      "id": "item_b9f603794e62",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "This is still asking too many clarifying questions for example this we need to simplify it so all it does is once we take the user's input ask clarifying questions to get to them all at once and then we proceed with the research."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8688626818181819,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 8.66700429469347e-06
+      }
+    },
+    {
+      "id": "item_ad16aeb570d5",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Understood! From now on, after your initial request, I'll ask all needed clarifying questions at once to understand your requirements fully before proceeding with research. \n\nTo try this out with your current topic on 4-billion parameter language models, here are a few questions to cover it all at once:\n\n1. Which specific details are you interested in? (e.g., architecture, training methods, performance, applications)\n2. Do you want recent research papers, industry examples, or both?\n3. Any preference on model types? (e.g., decoder-only like GPT, encoder-decoder like T5)\n4. Are you focusing on open-source models or commercial/proprietary ones?\n5. Do you want comparisons with larger or smaller models?\n6. Any target use case or domain you're focusing on?\n\nOnce I have your answers, I’ll start the research and keep the summary brief and clear. How does that sound?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763822009.505882,
+        "stopped_speaking_at": 1763822014.049737,
+        "llm_node_ttft": 0.573106124997139,
+        "tts_node_ttfb": 0.8289345420198515
+      }
+    }
+  ]
+}

@@ -1,0 +1,546 @@
+{
+  "items": [
+    {
+      "id": "item_0505bc86b926",
+      "type": "agent_handoff",
+      "new_agent_id": "assistant"
+    },
+    {
+      "id": "item_978f96d962b8",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Tell me the latest information on open source models that are running locally."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8893857692307692,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 1.7080164980143309e-06
+      }
+    },
+    {
+      "id": "item_a1d77fe15c07",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Thank you for your request! I will perform a thorough search using Valyu to gather the latest information on open source models that can run locally. To ensure I provide the most relevant and detailed information, could you please specify:\n\n1. Are you interested in any particular type of models (e.g., language models, vision models, etc.)?\n2. Do you have preferences regarding the hardware or platforms (e.g., CPU-only, GPUs, specific operating systems)?\n3. Are you looking for models with specific capabilities or sizes?\n\nThis will help me tailor the research precisely to your needs."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763824388.8223202,
+        "stopped_speaking_at": 1763824421.4238021,
+        "llm_node_ttft": 0.9473022500169463,
+        "tts_node_ttfb": 0.3810789579874836
+      }
+    },
+    {
+      "id": "item_8a92c2b02b7d",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Anything that can run locally with eight gigabytes of vram."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8638668,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 2.208020305261016e-06
+      }
+    },
+    {
+      "id": "item_c6396f7cb236",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Got it—you're interested in open source models that can run locally with around 8 GB of VRAM. I'll conduct an in-depth search to find the latest and most suitable models, focusing on those that fit within this hardware constraint.\n\nAre there any particular types of models you're most interested in (e.g., text generation, image generation, audio processing), or should I include a broad range? Also, is the intended use case or application domain important for your search?"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763824430.0539021,
+        "stopped_speaking_at": 1763824453.7398558,
+        "llm_node_ttft": 0.5357577499817125,
+        "tts_node_ttfb": 0.4765027499815915
+      }
+    },
+    {
+      "id": "item_e319c13e04e1",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Anything you decide"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8441326666666665,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 7.499766070395708e-07
+      }
+    },
+    {
+      "id": "item_085f1d14a1da",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Thank you for the clarification! I'll proceed with a comprehensive search to identify the latest open source models across various domains that can run locally within an 8 GB VRAM constraint.\n\nI will start the research now and get back to you with detailed findings shortly. If you have any other preferences or questions in the meantime, feel free to let me know!"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763824467.809118,
+        "stopped_speaking_at": 1763824484.3428779,
+        "llm_node_ttft": 0.4927399590087589,
+        "tts_node_ttfb": 0.24983266700292006
+      }
+    },
+    {
+      "id": "item_c49d196d0ed5",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Simplify the system completely so that no clarifying questions are asked and it just does deep research on what the user inputs."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8841643181818181,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 3.4999975468963385e-06
+      }
+    },
+    {
+      "id": "item_24b15cd6a4e9",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Because the clarifying questions part is buggy so it just does the deep research and then once the deep research is complete."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.897554,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 5.8340083342045546e-06
+      }
+    },
+    {
+      "id": "item_e9085e5b6b59",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Understood! From now on, I will perform deep research using Valyu directly on your query without asking any clarifying questions, and provide the results once the research is complete. Please go ahead with your next question or topic!"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763824515.199758,
+        "stopped_speaking_at": 1763824515.481954,
+        "llm_node_ttft": 0.5138317079981789,
+        "tts_node_ttfb": 0.7101682080246974
+      }
+    },
+    {
+      "id": "item_d825265f5b6f",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "It says it's complete and it's available and"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.832703125,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 1.7090060282498598e-06
+      }
+    },
+    {
+      "id": "item_760125e444a0",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Yeah."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.943102,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 1.9589788280427456e-06
+      }
+    },
+    {
+      "id": "item_24540de3e66d",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I'll conduct deep research on that. To give you the best results, I have a few quick questions: 1. What specific topic or area are you interested in? 2. Are you looking for information, data, or something else related to \"Yeah\"?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_58dd70138138",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Thank you for confirming! Since your previous query was about the latest open source models that can run locally with around 8 GB of VRAM, I will now present the research findings based on that.\n\nHere is the information on the latest open source models suitable for local deployment within an 8 GB VRAM constraint: \n\n[Research results to follow...]\n\nPlease let me know if you want me to proceed with the detailed findings now."
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763824528.044884,
+        "stopped_speaking_at": 1763824528.057963,
+        "llm_node_ttft": 0.37480604101438075,
+        "tts_node_ttfb": 0.36873770802048966
+      }
+    },
+    {
+      "id": "item_a94a5c50247b",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Instead."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.900369,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 2.6249908842146397e-06
+      }
+    },
+    {
+      "id": "item_1ce6d53fdd5a",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Of specifically"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.901501,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 8.329807315021753e-07
+      }
+    },
+    {
+      "id": "item_717f6e8ada9c",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I understand now—you want me to avoid asking clarifying questions and just perform the deep research immediately based on whatever you input, then provide the research results once complete.\n\nPlease provide your next query, and I will start the research and share the findings without any follow-up questions."
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763824538.397883,
+        "stopped_speaking_at": 1763824552.005992,
+        "llm_node_ttft": 0.4557536250213161,
+        "tts_node_ttfb": 0.5923091660079081
+      }
+    }
+  ],
+  "research_sessions": [
+    {
+      "timestamp": "2025-11-22T15:14:27.049553",
+      "type": "research_session",
+      "session_id": "mock_room",
+      "original_query": "Tell me the latest information on open source models that are running locally.",
+      "clarifying_questions": [
+        "Are you looking for specific types of open source models, like machine learning or natural language processing?",
+        "Do you want information on installation procedures, performance, or use cases for these models?"
+      ],
+      "user_answers": [
+        "Anything that can run locally with eight gigabytes of vram.",
+        "Anything you decide"
+      ],
+      "research_summary": "The article from Niftytechfinds.com explores over fifty open-source large language models (LLMs) along with their PC requirements, including specifications for RAM, SSD, and GPU/VRAM. Additionally, it highlights LocalAI as a comprehensive, free alternative to OpenAI and Anthropic, designed to facilitate powerful AI functionalities.",
+      "detailed_results": [
+        {
+          "title": "Top local Opensource LLMs with PC requirements (RAM, SSD, GPU/VRAM)- Niftytechfinds.com - A tech blog dedicated to latest innovations in ai.",
+          "url": "https://niftytechfinds.com/local-opensource-llm-hardware-guide/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "In this article you will learn about more than fifty open-source solutions for running large language models (LLMs) locally on your PC or server. You will get a full breakdown of categories (runtimes, web UIs, model families, edge/mobile formats), plus hardware guidance (system RAM, SSD storage, GPU",
+          "relevance_score": 0.9605438063520346,
+          "authors": null,
+          "publication_date": "2025-11-16",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "LocalAI",
+          "url": "https://localai.io/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "# LocalAI\n\nThe free, OpenAI, Anthropic alternative. Your All-in-One Complete AI Stack - Run powerful language models, autonomous agents, and document intelligence locally on your hardware.\n\nNo cloud, no limits, no compromise.\n\n⭐ Star us on GitHub - 33.3k+ stars and growing!\n\nDrop-in replacement for ",
+          "relevance_score": 0.8729479848401461,
+          "authors": null,
+          "publication_date": "2025-11-19",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "How To Run an Open-Source LLM on Your Personal Computer – Run Ollama Locally",
+          "url": "https://www.freecodecamp.org/news/how-to-run-an-open-source-llm-on-your-personal-computer-run-ollama-locally/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Running a large language model (LLM) on your computer is now easier than ever. You no longer need a cloud subscription or a massive server. With just your PC, you can run models like Llama, Mistral, or Phi, privately and offline.\n\nThis guide will show you how to set up an open-source LLM locally, ex",
+          "relevance_score": 0.8603874811811901,
+          "authors": null,
+          "publication_date": "2025-11-10",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "7 Best LLM Tools To Run Models Locally (November 2025) – Unite.AI",
+          "url": "https://www.unite.ai/best-llm-tools-to-run-models-locally/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "- Best Of 10 Best AI Tools for Business (November 2025) Artificial intelligence (AI) technologies have opened up countless new opportunities for every size business... Full Answer Alex McFarland\n\n#### 10 Best AI Tools for Business (November 2025)\n\n- Best Of 10 Best Machine Learning Software (Novembe",
+          "relevance_score": 0.8576174223049795,
+          "authors": null,
+          "publication_date": "2025-11-19",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Best Local LLMs For Coding",
+          "url": "https://www.mslinn.com/llm/7900-coding-llms.html?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Published 2025-11-03. Last modified 2025-11-12. Time to read: 16 minutes.\n\nDid you know that all the computers on your LAN can pool their VRAM so your LLM models run across your entire LAN? That means a modest laptop, attached via a solid Wi-Fi connection could employ some impressive local horsepowe",
+          "relevance_score": 0.8117269611667272,
+          "authors": null,
+          "publication_date": "2025-11-03",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Best GPU for Local LLM[2025]: Complete Hardware Guide for Running Language Models Locally",
+          "url": "https://nutstudio.imyfone.com/llm-tips/best-gpu-for-local-llm/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Best GPU for Local LLM[2025]: Complete Hardware Guide for Running Language Models Locally\n\nHome > LLM Tips\n\nAaron Smith\n\nNovember 20, 2025\n\n254 views , 10 mins read\n\nRated successfully!\n\nYou have already rated this article, please do not repeat scoring!\n\nHave you seen headlines about private ChatGPT",
+          "relevance_score": 0.8062891186284337,
+          "authors": null,
+          "publication_date": "2025-11-20",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "4 open‑source apps I use to run AI locally",
+          "url": "https://www.xda-developers.com/opensource-apps-i-use-to-run-ai-locally/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Sign in to your XDA account\n\nNo AdsNinja v10 Client!\n\nNo AdsNinja v10 Client!\n\nNo AdsNinja v10 Client!\n\nNo AdsNinja v10 Client!\n\nWhen AI platforms started mushrooming out of nowhere, I wasn’t very fond of using them in my workflows. And well, that sentiment still hasn’t changed, especially with most",
+          "relevance_score": 0.7816538912474013,
+          "authors": null,
+          "publication_date": "2025-11-11",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Run AI Models Locally: A New Laptop Era Begins - IEEE Spectrum",
+          "url": "https://spectrum.ieee.org/ai-models-locally?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "[Computing](https://spectrum.ieee.org/topic/computing/)[AI](https://spectrum.ieee.org/topic/artificial-intelligence/)[Magazine](https://spectrum.ieee.org/magazine/)[Feature](https://spectrum.ieee.org/type/feature/)\n\n# Your Laptop Isn’t Ready for LLMs. That’s About to Change\n\nLocal AI is driving the ",
+          "relevance_score": 0.7475824786523851,
+          "authors": null,
+          "publication_date": "2025-11-19",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "PRIMA.CPP: Speeding Up 70B-Scale LLM Inference on Low-Resource Everyday Home Clusters",
+          "url": "https://arxiv.org/abs/2504.08791?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "# 1 Introduction\n\nCurrent large language models (LLMs) are mostly cloud-based, but DeepSeek [DeepSeek-AI, 2025] changes this. Its R1 series, spanning from 1.5B to 70B, bring small models closer to frontier performance. Its 70B version even surpasses cloud-based models like GPT-4o and Claude 3.5 Sonn",
+          "relevance_score": 0.692543716163966,
+          "authors": null,
+          "publication_date": "2025-04-07",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "The Complete Guide to Running LLMs Locally: Hardware, Software, and Performance Essentials",
+          "url": "https://www.ikangai.com/the-complete-guide-to-running-llms-locally-hardware-software-and-performance-essentials/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "## Why Run LLMs Locally?\n\nBefore we dive into the mechanics, let's be clear about what you're gaining and what you're trading away.\n\nPrivacy and Data Control: Your prompts never leave your machine. This matters more than it sounds, especially for businesses handling sensitive documents, medical reco",
+          "relevance_score": 0.674283349039849,
+          "authors": null,
+          "publication_date": "2025-10-26",
+          "doi": null,
+          "citation_count": null
+        }
+      ]
+    },
+    {
+      "timestamp": "2025-11-22T15:15:24.081415",
+      "type": "research_session",
+      "session_id": "mock_room",
+      "original_query": "Simplify the system completely so that no clarifying questions are asked and it just does deep research on what the user inputs.",
+      "clarifying_questions": [
+        "What specific topics or areas do you want the deep research to focus on?",
+        "Are there any particular formats or types of information you prefer for the results?"
+      ],
+      "user_answers": [
+        "Because the clarifying questions part is buggy so it just does the deep research and then once the deep research is complete.",
+        "It says it's complete and it's available and"
+      ],
+      "research_summary": "The r/ChatGPTJailbreak subreddit discusses frustrations with ChatGPT's Deep Research feature, particularly its tendency to ask clarifying questions. In an article by Tim King, the Deep Research system is explained as a tool designed to transform complex inquiries into understandable insights.",
+      "detailed_results": [
+        {
+          "title": "r/ChatGPTJailbreak on Reddit: ChatGPT Deep Research System Prompt",
+          "url": "https://www.reddit.com/r/ChatGPTJailbreak/comments/1kllqxq/chatgpt_deep_research_system_prompt/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "**Question:**\nI got kinda pissed that Deep Research would always ask me clarifying questions no matter what, and I figured that since Deep Research supposedly used o3 model, but the clarifying questions were sent by gpt-4o (I think), then it must be that Deep Research is encapsulated in a tool call ",
+          "relevance_score": 0.7443307021072604,
+          "authors": null,
+          "publication_date": "2025-05-13",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "AI Deep Research Explained: Turning Complex Questions into Clear Insight",
+          "url": "https://solutionsreview.com/ai-deep-research-explained-turning-complex-questions-into-clear-insight/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "# AI Deep Research Explained: Turning Complex Questions into Clear Insight\n\n- By Tim King , Executive Editor at Solutions Review\n\n- Best Practices,\n\nSolutions Review Executive Editor Tim King demystifies AI Deep Research so you can have AI Deep Research explained. This introduction to AI Deep Resear",
+          "relevance_score": 0.6892773892522848,
+          "authors": null,
+          "publication_date": "2025-10-23",
+          "doi": null,
+          "citation_count": null
+        }
+      ]
+    },
+    {
+      "timestamp": "2025-11-22T15:15:37.314956",
+      "type": "research_session",
+      "session_id": "mock_room",
+      "original_query": "Yeah.",
+      "clarifying_questions": [
+        "What specific topic or area are you interested in?",
+        "Are you looking for information, data, or something else related to \"Yeah\"?"
+      ],
+      "user_answers": [
+        "Instead.",
+        "Of specifically"
+      ],
+      "research_summary": "\"Yea\" is often used as a formal or archaic affirmation, particularly in voting contexts, while \"yeah\" is a casual, informal way to express agreement or acknowledgment in everyday conversation. The context of usage determines which word is appropriate, with \"yeah\" being more common in spoken language.",
+      "detailed_results": [
+        {
+          "title": "What Is The Difference Between \"Yea\" vs. \"Yeah\"? - Dictionary.com",
+          "url": "https://www.dictionary.com/e/yeah-vs-yea/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Yeah … these two words seem the same but which one should you use?\n\n## Yea vs. yeah\n\nYea can be used as an informal adverb meaning “yes” or “to affirm,” or as a noun to indicate an affirmative vote. When used in a vote, yea can be pronounced like “yay.”\n\nYea can also be used as an adverb to amplify ",
+          "relevance_score": 0.8428838568910795,
+          "authors": null,
+          "publication_date": "2021-02-25",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Yea vs. Yeah: What’s the Difference? - Writing Explained",
+          "url": "https://writingexplained.org/yea-vs-yeah-difference?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Home » Yea vs. Yeah: What’s the Difference?\n\nThere are often drastic differences between spoken and written language. Spoken language is usually less formal—it incorporates slang, blends, and substitutions in ways that written language doesn’t or sometimes can’t. However, in the long run, the way a ",
+          "relevance_score": 0.8323517169383577,
+          "authors": null,
+          "publication_date": "2016-08-05",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Yea, Yeah or Yay–What's the Difference? | Grammarly",
+          "url": "https://www.grammarly.com/blog/commonly-confused-words/yea-yeah-yay/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "# Yea, Yeah, or Yay?\n\n*Yea*,*yeah*, and*yay*are commonly equated with the word*yes*. If you’re one of the people doing it, you would be correct roughly sixty-six percent of the time—you can use*yea*or*yeah*for*yes*, but it’s a whole different story with*yay*, which is the exclamation people use to e",
+          "relevance_score": 0.825403504966443,
+          "authors": null,
+          "publication_date": "2022-10-06",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Yea vs. Yeah – How to Use Each Correctly - Queens, NY English Society",
+          "url": "https://www.queens-english-society.com/yea-vs-yeah?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "## Yea vs. Yeah – What’s the Gist?\n\nOn its face, *yea* and *yeah* seem to reflect the same idea: one of affirmation. Although they look similar, these two words are pronounced differently and have slightly different meanings.\n\n- *Yea* is either an adverb or a noun.\n- *Yeah* is an adverb.\n\nLet’s expl",
+          "relevance_score": 0.825403504966443,
+          "authors": null,
+          "publication_date": "2020-04-14",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Yay, Yea, Yeah, or Yes?",
+          "url": "https://www.quickanddirtytips.com/articles/yay-yea-yeah-or-yes/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "- Podcasts Grammar Girl Get-Fit Guy Money Girl Project Parenthood Relationship Doctor Modern Mentor Nutrition Diva Savvy Psychologist Who Knew? Curious State Unknown History Modern Manners Guy\n\n- Grammar Girl\n\n- Get-Fit Guy\n\n- Money Girl\n\n- Project Parenthood\n\n- Relationship Doctor\n\n- Modern Mentor\n",
+          "relevance_score": 0.8116806013496,
+          "authors": null,
+          "publication_date": "2022-07-14",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Yea vs. Yeah: Saying Yes In Different Ways | YourDictionary",
+          "url": "https://www.yourdictionary.com/articles/yea-vs-yeah-saying-yes?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "By\n\nAlyssa Serrani, M.A.\n\n, Staff Writer\n\nUpdated November 24, 2021\n\n- DESCRIPTION Yea - Victorian People Voting vs Yeah - Young Man With Smartphone - SOURCE adekvat / iStock / Getty Images Plus - PERMISSION Used under Getty Images license\n\nWhen choosing a synonym for yes, yeah is probably the first",
+          "relevance_score": 0.8094157354924181,
+          "authors": null,
+          "publication_date": "2021-11-24",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "When can we say “yeah” instead of “yes”?? I feel yes is more formal, but how formal or casual both of them are?? | HiNative",
+          "url": "https://hinative.com/questions/1028194?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "- Japanese\n\nQuality Point(s): 0\n\nAnswer: 36\n\nLike: 32\n\n- English (US)\n\n- Spanish (Spain)\n\n# When can we say “yeah” instead of “yes”?? I feel yes is more formal, but how formal or casual both of them are??\n\n- Report copyright infringement\n\n- English (US)\n\nQuality Point(s): 62\n\nAnswer: 110\n\nLike: 122\n",
+          "relevance_score": 0.788212228360749,
+          "authors": null,
+          "publication_date": "2020-04-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "word usage - Is yea an acceptable replacement for yeah? - English Language & Usage Stack Exchange",
+          "url": "https://english.stackexchange.com/questions/146726/is-yea-an-acceptable-replacement-for-yeah?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "**Question:**\nIs yea an acceptable replacement for yeah?\n\n**Answer:**\n'Yea' is a real but antiquated word, still in use in various contexts e.g. 'Whose job is it to say *yea* or *nay*?'Yeah' is the representation of an informal pronunciation of 'yes'. (OED).So if you are reporting informal speech I ",
+          "relevance_score": 0.776469967060883,
+          "authors": null,
+          "publication_date": "",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Why do people tend to say 'yeah' instead of 'yes' these days? • Physics Forums",
+          "url": "https://www.physicsforums.com/threads/why-do-people-tend-to-say-yeah-instead-of-yes-these-days.232479/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "- Forums\n\n- The Lounge\n\n- General Discussion\n\n# Why do people tend to say 'yeah' instead of 'yes' these days?\n\n- Thread starter Thread starter tgt\n\n- Start date Start date May 1, 2008\n\n- Laser-induced break-up of C₆₀ fullerenes caught in real-time on X-ray camera\n\n- Atoms passing through walls: Quan",
+          "relevance_score": 0.7757262776296554,
+          "authors": null,
+          "publication_date": "2008-05-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "yea / yeah / yay | Common Errors in English Usage and More | Washington State University",
+          "url": "https://brians.wsu.edu/2016/05/19/yea-yeah-yay/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "- Search\n\n- Contact\n\n- Share\n\n“Yea” is a very old-fashioned formal way of saying “yes,” used mainly in voting. It’s the opposite of—and rhymes with—“nay.” When you want to write the common casual version of “yes,” the correct spelling is “yeah” (sounds like “yeh” ). When the third grade teacher anno",
+          "relevance_score": 0.7719115476285725,
+          "authors": null,
+          "publication_date": "2016-05-19",
+          "doi": null,
+          "citation_count": null
+        }
+      ]
+    }
+  ]
+}

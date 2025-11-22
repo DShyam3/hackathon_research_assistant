@@ -1,0 +1,489 @@
+{
+  "items": [
+    {
+      "id": "item_b6c0b1b134d6",
+      "type": "agent_handoff",
+      "new_agent_id": "assistant"
+    },
+    {
+      "id": "item_8bd1310a8517",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Give me the latest information on large language models that are open source and can run locally on mac with sixteen gigabytes of ram"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8740681250000001,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 2.2919848561286926e-06
+      }
+    },
+    {
+      "id": "item_20a93e04c765",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "I will start researching the latest information on large language models that are open source and can run locally on a Mac with 16 GB of RAM. To narrow down the results and provide the most relevant information, could you please clarify a few points?\n\n1. Are you interested in any specific tasks or applications for these language models (e.g., text generation, summarization, coding assistance)?\n2. Do you prefer models optimized for CPU usage, or do you have access to a GPU on your Mac?\n3. Are you looking for pre-trained models only, or are you open to models that require some fine-tuning?\n4. Would you like information on the ease of setup and usage, or primarily on performance and capabilities?\n\nOnce I have this information, I can proceed with a focused and thorough search."
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763823434.4768379,
+        "stopped_speaking_at": 1763823465.386812,
+        "llm_node_ttft": 0.504796291992534,
+        "tts_node_ttfb": 0.6461232909932733
+      }
+    },
+    {
+      "id": "item_586e38a61072",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Here's a brief summary of my research: LLaMA is an open-source series of large language models developed by Meta AI, aimed at advancing language processing capabilities. The study evaluates the effectiveness of vocabulary tests as a benchmark for assessing large language models."
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    },
+    {
+      "id": "item_ccb1f2741542",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Models only or"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.7273873333333333,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 1.7499842215329409e-06
+      }
+    },
+    {
+      "id": "item_9ef2683c6a03",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Thanks for the clarification! Are you asking if you want information solely on the models themselves, or would you also like details about related tools, frameworks, or deployment strategies to run these models locally on a Mac with 16 GB RAM?"
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763823474.966403,
+        "stopped_speaking_at": 1763823477.442546,
+        "llm_node_ttft": 0.7931715410086326,
+        "tts_node_ttfb": 0.31768995901802555
+      }
+    },
+    {
+      "id": "item_1186730e94b6",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Thanks for the clarification."
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.88064525,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 1.91599247045815e-06
+      }
+    },
+    {
+      "id": "item_cc85cbbec9bd",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "You're welcome! Let me know if you'd like me to proceed with detailed research specifically on open-source large language models alone, or if you'd like me to include tools and deployment options as well. Feel free to provide any other preferences or questions!"
+      ],
+      "interrupted": false,
+      "extra": {},
+      "metrics": {
+        "started_speaking_at": 1763823484.916211,
+        "stopped_speaking_at": 1763823497.688107,
+        "llm_node_ttft": 0.5485010829870589,
+        "tts_node_ttfb": 0.7797655419853982
+      }
+    },
+    {
+      "id": "item_e8f0c250cec7",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Here's a brief summary of my research: The automatic evaluation protocol for CLAM assesses the effectiveness of the Selective Clarification framework designed to handle ambiguous questions using generative language models. CLAM, or CLarify-if-AMbiguous, aims to improve clarity by selectively prompting for additional information when questions lack specificity."
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    }
+  ],
+  "research_sessions": [
+    {
+      "timestamp": "2025-11-22T14:57:13.325183",
+      "type": "research_session",
+      "session_id": "mock_room",
+      "original_query": "Give me the latest information on large language models that are open source and can run locally on mac with sixteen gigabytes of ram",
+      "clarifying_questions": [],
+      "user_answers": [],
+      "research_summary": "LLaMA is an open-source series of large language models developed by Meta AI, aimed at advancing language processing capabilities. The study evaluates the effectiveness of vocabulary tests as a benchmark for assessing large language models.",
+      "detailed_results": [
+        {
+          "title": "A Review of Multi-Modal Large Language and Vision Models",
+          "url": "https://arxiv.org/abs/2404.01322?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "### 4.4 LLaMA\n\nLLaMA is a series of open source LLMs developed by Meta AI. The goal for Meta was to provide an accessible and open sourced LLM to help make advancements in research and application development in the sub field of NLP, thus enabling others in the research community to access the vast ",
+          "relevance_score": 0.7085062558815821,
+          "authors": null,
+          "publication_date": "2024-03-28",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Establishing vocabulary tests as a benchmark for evaluating large language models Establishing vocabulary tests as a benchmark for evaluating large language models",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC11637312?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "## Materials and methods\nTo assess the usefulness of vocabulary tests in LLM evaluation, we conducted several vocabulary tests on different LLMs. To have a representative sample of current LLMs, we selected two company-owned, commercial LLM tools: ChatGPT (based on GPT3.5 and GPT4 see [https://opena",
+          "relevance_score": 0.6635486568717606,
+          "authors": null,
+          "publication_date": "2024-12-12",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "MacBehaviour: An R package for behavioural experimentation on large language models",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC11655609?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "MacBehaviour differs from existing toolkits for probing LLM behaviours in several important ways. First, in contrast to existing packages like “transformer” (Wolf et al., [41]) and “minicons” (Misra, [28]), which focus on analysing locally deployed LLMs, MacBehaviour stands out by enabling interacti",
+          "relevance_score": 0.629657256673248,
+          "authors": null,
+          "publication_date": "2024-12-18",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "A tutorial on open-source large language models for behavioral science",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC11525391?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "### An overview of model types\nSince the inception of the transformer architecture (Vaswani et al., [80]), many model variants have emerged that differ in important ways, including the architecture family (i.e., *encoder*, *decoder*, or *encoder-decoder*), model size, stage of training reached by th",
+          "relevance_score": 0.6236367917473383,
+          "authors": null,
+          "publication_date": "2024-08-15",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "A tutorial on open-source large language models for behavioral science",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC11525391?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "### Open-source LLMs and open behavioral science\nBehavioral science is going through an open science revolution guided by principles such as transparency, accessibility, and sharing (Vicente-Saez & Martinez-Fuentes, [81]). Open-source and open-access language modeling frameworks such as Hugging Face",
+          "relevance_score": 0.621741840780096,
+          "authors": null,
+          "publication_date": "2024-08-15",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "A Review of Multi-Modal Large Language and Vision Models",
+          "url": "https://arxiv.org/abs/2404.01322?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "# 1 Introduction\n\nLarge Language Models (LLMs) are one of the hottest topics in artificial intelligence (AI) research and interest in them and how they can be used in generative AI applications has spilled into the mainstream media. Their popularity in the public sphere has been triggered by the arr",
+          "relevance_score": 0.6107960321027593,
+          "authors": null,
+          "publication_date": "2024-03-28",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "A Review of Multi-Modal Large Language and Vision Models",
+          "url": "https://arxiv.org/abs/2404.01322?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "### 2.2 Attention Mechanisms\n\nThe Transformer architecture has been a paradigm shift in the field of NLP. First introduced in [25], it is an architecture that uses only attention mechanisms, specifically Self-Attention and Multi-Headed attention. Recently, methods utilising the attention mechanism h",
+          "relevance_score": 0.6012744279397157,
+          "authors": null,
+          "publication_date": "2024-03-28",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Debugging with Open-Source Large Language Models: An Evaluation",
+          "url": "https://arxiv.org/abs/2409.03031?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "## 1 INTRODUCTION\n\n\"I'd spend an hour figuring out what exactly goes wrong, then five minutes writing the code to fix it, and then half an hour testing the whole thing. That's just over 5% coding vs. almost 95% non-coding.\"1\n\nDebugging is known to be time consuming and frustrating. Therefore it is n",
+          "relevance_score": 0.5900530688952705,
+          "authors": null,
+          "publication_date": "2024-10-15",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Natural language processing in the era of large language models",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC10820986?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "## 2 Limitations and open challenges\nThe success of LLMs is not without controversy, which is in turn shaping up ongoing research in NLP and opening up avenues for more research in improving these LLMs. The following are some of the key limitations of LLMs which need further exploration.\n\n### 2.1 Bl",
+          "relevance_score": 0.575280483248651,
+          "authors": null,
+          "publication_date": "2024-01-12",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Natural Language Processing for Digital Health in the Era of Large Language Models",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC12020548?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "## 2. Adapting LLMs for the Medical Domain\n\n### 2.1. Training Medical LLMs\n\nAlthough generic LLMs like ChatGPT\n[FNsarker-1]\nand GPT-4 [\n12\n] have demonstrated their robustness in diverse contexts, their performance on medical texts is often suboptimal [\n13\n,\n14\n], perhaps due to insufficient medical",
+          "relevance_score": 0.539765625000236,
+          "authors": null,
+          "publication_date": "2025-04-08",
+          "doi": null,
+          "citation_count": null
+        }
+      ]
+    },
+    {
+      "timestamp": "2025-11-22T14:57:53.854425",
+      "type": "research_session",
+      "session_id": "mock_room",
+      "original_query": "Models only or",
+      "clarifying_questions": [],
+      "user_answers": [],
+      "research_summary": "Models serve as essential experimental tools, with mathematical representations forming the basis for computer implementations in various fields. This approach allows for simulations that can replicate complex biological systems and processes.",
+      "detailed_results": [
+        {
+          "title": "Of (Biological) Models and Simulations",
+          "url": "https://arxiv.org/abs/2302.09558?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "# **Modeling, the Only Experimental Tool**\n\nIn the most basic form, a model can be seen as the box or system between the input or stimuli, and the output or response [45]. The main goal of science is to understand and explain how the response(s) is/are a result of the input(s) [46]. Taking Monod's e",
+          "relevance_score": 0.7186601099722785,
+          "authors": null,
+          "publication_date": "2023-01-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Is a mathematical model equivalent to its computer implementation?",
+          "url": "https://arxiv.org/abs/2402.15364?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "### I. INTRODUCTION\n\nThe use of mathematical models [1] has become increasingly commonplace in many fields, including biology, physics, economics, sociology and engineering. Mathematical models are abstract representations of systems or processes that allow researchers to study their behavior under ",
+          "relevance_score": 0.6542615367196745,
+          "authors": null,
+          "publication_date": "2024-06-18",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Of (Biological) Models and Simulations",
+          "url": "https://arxiv.org/abs/2302.09558?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "In fact, a model need not be highly accurate to be useful. For example, Karr, et al. [39] constructed a whole cell metabolic model of *Mycoplasma genitalium*. Although after modeling all 525 genes and its metabolism, Karr, et al. [39] managed to achieve a correlation of 0.82 (reported as R2 of 0.68)",
+          "relevance_score": 0.6292972372576832,
+          "authors": null,
+          "publication_date": "2023-01-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Model Pluralism",
+          "url": "https://arxiv.org/abs/1909.13653?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "the problem of how to compare results deriving from structurally different models is one of the most interesting questions that the debate on robustness analysis has opened to today's scientific practice and promising works are expected to come from this research area in the near future\" (p. 83).\n\nN",
+          "relevance_score": 0.62824043242302,
+          "authors": null,
+          "publication_date": "2019-01-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Computational science: shifting the focus from tools to models v2; ref status: indexed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC4184301?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "Models do not necessarily need to be quantitative. The metabolic pathways in biochemistry are a well-known example for non-quantitative models. However, in the context of computational science, nearly all models are quantitative, as they predict numbers that are compared to the numbers obtained from",
+          "relevance_score": 0.6272808536867578,
+          "authors": null,
+          "publication_date": "2014-06-17",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Quantitative Modelling in Stem Cell Biology and Beyond: How to Make Best Use of It",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC10739548?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "## Data-Free Model Analysis\nCommonly, quantitative models are used in view of experimental data. The study of intrinsic properties of models from a plainly theoretical standpoint, without explicitly taking into account data, is often seen as a mere academic exercise. Nonetheless, studying the intrin",
+          "relevance_score": 0.6231529518095265,
+          "authors": null,
+          "publication_date": "2023-12-11",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Computational modelling for decision-making: where, why, what, who and how Modelling for decision-making",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC6030334?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "5.1.### Types of model\nThere are a wide range of computational modelling techniques, but they differ principally along a few dimensions. Selecting particular points along these dimensions implies a set of abstractions and assumptions about the system being modelled, which in turn determines how obse",
+          "relevance_score": 0.6190688420909891,
+          "authors": null,
+          "publication_date": "2018-06-20",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Computational modelling for decision-making: where, why, what, who and how Modelling for decision-making",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC6030334?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "3.1.1.#### Prediction or forecasting.\nAlmost all computational models ‘predict’ in the weak sense of being able to calculate an anticipated result from a given set of variables. A stronger form of prediction goes further than this, anticipating unknown (usually future) outcomes in the observed world",
+          "relevance_score": 0.6094661313150671,
+          "authors": null,
+          "publication_date": "2018-06-20",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "A Lightweight Image Super-Resolution Transformer Trained on Low-Resolution Images Only",
+          "url": "https://arxiv.org/abs/2503.23265?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "#### I. INTRODUCTION\n\nSingle-image super-resolution (SISR) models aim to construct a high-resolution (HR) output image from a corresponding low-resolution (LR) input image. Conventionally, the SISR performance is measured in terms of image similarity between an SISR HR output image reconstructed fro",
+          "relevance_score": 0.6072574392705818,
+          "authors": null,
+          "publication_date": "2025-03-30",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Quantitative Modelling in Stem Cell Biology and Beyond: How to Make Best Use of It",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC10739548?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "### Universality: Curse and Opportunity\n*Universality* is the phenomenon that different models can sometimes generate the same predictions with respect to a certain type of data, if some quantities, like mean values or passed time, are sufficiently large [27]. Models which yield the same predictions",
+          "relevance_score": 0.6065614614571853,
+          "authors": null,
+          "publication_date": "2023-12-11",
+          "doi": null,
+          "citation_count": null
+        }
+      ]
+    },
+    {
+      "timestamp": "2025-11-22T14:58:03.586694",
+      "type": "research_session",
+      "session_id": "mock_room",
+      "original_query": "Thanks for the clarification.",
+      "clarifying_questions": [],
+      "user_answers": [],
+      "research_summary": "The automatic evaluation protocol for CLAM assesses the effectiveness of the Selective Clarification framework designed to handle ambiguous questions using generative language models. CLAM, or CLarify-if-AMbiguous, aims to improve clarity by selectively prompting for additional information when questions lack specificity.",
+      "detailed_results": [
+        {
+          "title": "CLAM: Selective Clarification for Ambiguous Questions with Generative Language Models",
+          "url": "https://arxiv.org/abs/2212.07769?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "# 4. Automatic Evaluation Protocol\n\nIn this section, we introduce an automatic evaluation protocol that allows us to evaluate multi-turn dialogues without requiring human input. In the selective clarification QA setting (Figure 2), the user provides clarification when the model asks a clarifying que",
+          "relevance_score": 0.6412536698682795,
+          "authors": null,
+          "publication_date": "2022-01-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "CLAM: Selective Clarification for Ambiguous Questions with Generative Language Models",
+          "url": "https://arxiv.org/abs/2212.07769?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "# 3. CLAM: Selective clarification Framework\n\nIn this section, we introduce CLarify-if-AMbiguous (CLAM)—a framework for language models to ask for selective clarification about possibly vague user questions.\n\nThe framework involves four stages, illustrated in Figure 2. In the first stage, the user a",
+          "relevance_score": 0.6350270109965124,
+          "authors": null,
+          "publication_date": "2022-01-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Clarification and transparency on ILR migration review",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC11999572?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "Thank you for sharing your concerns [1]. I appreciate the opportunity to address these points and provide further clarification.\n\nMy review [2] began after reading a specific case report on ILR migration, which sparked my interest in exploring its occurrence and contributing factors. This led me to ",
+          "relevance_score": 0.6344855323486045,
+          "authors": null,
+          "publication_date": "2025-04-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Problem-Based Learning to Encourage Active Learning and Teamwork Among First Year Medical Students - Student Reports in 2020 - What is the Best Response When Listeners Fail to Hear English Correctly? (Course name: Listening Skills: Development and Assessment)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC11284285?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "## Introduction\nSeeking clarification is one of the vital skills that language learners need to acquire. Compared with native speakers, language learners encounter many occasions where they cannot understand what the other people are saying. The lack of understanding comes from various reasons, such",
+          "relevance_score": 0.6231529518095265,
+          "authors": null,
+          "publication_date": "2022-11-18",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "CLAM: Selective Clarification for Ambiguous Questions with Generative Language Models",
+          "url": "https://arxiv.org/abs/2212.07769?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "# 2. Selective Clarification QA Data Set\n\nUser: Provide clarification LM: Give final answer In this section, we introduce a data set that allows us to evaluate the performance on *selective clarification QA* (Figure 2). Selective clarification QA models the real-world observation that some user ques",
+          "relevance_score": 0.6230241879524041,
+          "authors": null,
+          "publication_date": "2022-01-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Taking Action Towards Graceful Interaction: The Effects of Performing\n  Actions on Modelling Policies for Instruction Clarification Requests",
+          "url": "https://arxiv.org/abs/2401.17039?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "Actions on Modelling Policies for Instruction Clarification Requests\n\nAuthors: Brielen Madureira, David Schlangen\n\nTitle: Taking Action Towards Graceful Interaction: The Effects of Performing\n  Actions on Modelling Policies for Instruction Clarification Requests\n\n Authors: Brielen Madureira, David S",
+          "relevance_score": 0.6196465110919068,
+          "authors": null,
+          "publication_date": "2024-01-30",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Problem-Based Learning to Encourage Active Learning and Teamwork Among First Year Medical Students - Student Reports in 2020 - What is the Best Response When Listeners Fail to Hear English Correctly? (Course name: Listening Skills: Development and Assessment)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/PMC11284285?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-pubmed",
+          "content_preview": "## Discussion\n\n### RQ1: What are the main reasons for language learners' failure to hear utterances?\nThe findings related to Question 1 showed that failure among the respondents to hear and understand content was most frequently caused by limitations in vocabulary. These results support what Mizuta[",
+          "relevance_score": 0.6146127559874868,
+          "authors": null,
+          "publication_date": "2022-11-18",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "CLAM: Selective Clarification for Ambiguous Questions with Generative Language Models",
+          "url": "https://arxiv.org/abs/2212.07769?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "We first establish the overall accuracy improvement of our implementation of the CLAM framework on selective clarification QA (steps 1 through 4 in Figure 2). Then, we study the performance on each of the necessary steps in Figure 2: detecting ambiguous questions (step 1b), generating useful clarify",
+          "relevance_score": 0.6116125863207633,
+          "authors": null,
+          "publication_date": "2022-01-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "CLAM: Selective Clarification for Ambiguous Questions with Generative Language Models",
+          "url": "https://arxiv.org/abs/2212.07769?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "### 5.1.1. OVERALL PERFORMANCE\n\nOverall, we find that CLAM boosts the language model's adjusted accuracy on ambiguous TriviaQA (containing both ambiguous and unambiguous questions) by roughly 20 percentage points (Figure 5a). Recall that the adjusted accuracy multiplies the accuracy on a given quest",
+          "relevance_score": 0.6053133147673226,
+          "authors": null,
+          "publication_date": "2022-01-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "CLAM: Selective Clarification for Ambiguous Questions with Generative Language Models",
+          "url": "https://arxiv.org/abs/2212.07769?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "# 5. Experiments\n\nIn this section, we experimentally validate the ability of CLAM to successfully detect and seek clarification to ambiguous questions.\n\nWe first demonstrate its overall improved accuracy on the end-to-end task of question answering on a data set that contains both ambiguous and unam",
+          "relevance_score": 0.5879614562177169,
+          "authors": null,
+          "publication_date": "2022-01-01",
+          "doi": null,
+          "citation_count": null
+        }
+      ]
+    }
+  ]
+}

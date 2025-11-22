@@ -1,0 +1,213 @@
+{
+  "items": [
+    {
+      "id": "item_38dfa93130a1",
+      "type": "agent_handoff",
+      "new_agent_id": "assistant"
+    },
+    {
+      "id": "item_16b8a14ebfe4",
+      "type": "message",
+      "role": "user",
+      "content": [
+        "Do some deep research on the latest models from china that are llms"
+      ],
+      "interrupted": false,
+      "transcript_confidence": 0.8478588461538461,
+      "extra": {},
+      "metrics": {
+        "transcription_delay": 0.0,
+        "on_user_turn_completed_delay": 6.250047590583563e-07
+      }
+    },
+    {
+      "id": "item_a89eb6ebfea9",
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        "Research complete. By mid-2025, China emerged as a leader in the global open-source large language model (LLM) landscape, with Chinese state media reporting that the country produced 1,509 of the approximately 3,755 publicly available LLMs worldwide. This surge in development has garnered notable endorsements, such as Airbnb's preference for Alibaba's Qwen over ChatGPT for customer service applications due to its superior speed. Additionally, new models like Kimi K2 Thinking, developed by Moonshot AI, have set benchmarks in reasoning, coding, and agent capabilities, reflecting significant advancements by Chinese AI firms in closing the performance gap with their international counterparts. Overall, these findings highlight the rapid evolution and competitive nature of China's AI sector in the global arena. The full results have been saved and are available."
+      ],
+      "interrupted": true,
+      "extra": {},
+      "metrics": {}
+    }
+  ],
+  "research_sessions": [
+    {
+      "timestamp": "2025-11-22T15:26:16.679424",
+      "type": "research_session",
+      "session_id": "mock_room",
+      "original_query": "Do some deep research on the latest models from china that are llms",
+      "clarifying_questions": [],
+      "user_answers": [],
+      "research_summary": "By mid-2025, China emerged as a leader in the global open-source large language model (LLM) landscape, with Chinese state media reporting that the country produced 1,509 of the approximately 3,755 publicly available LLMs worldwide. This surge in development has garnered notable endorsements, such as Airbnb's preference for Alibaba's Qwen over ChatGPT for customer service applications due to its superior speed. Additionally, new models like Kimi K2 Thinking, developed by Moonshot AI, have set benchmarks in reasoning, coding, and agent capabilities, reflecting significant advancements by Chinese AI firms in closing the performance gap with their international counterparts. Overall, these findings highlight the rapid evolution and competitive nature of China's AI sector in the global arena.",
+      "detailed_results": [
+        {
+          "title": "An Overview of Chinese Open-Source LLMs (Sept 2025) | IntuitionLabs",
+          "url": "https://intuitionlabs.ai/articles/chinese-open-source-llms-2025?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "# An Overview of Chinese Open-Source LLMs (Sept 2025)\n\n# Chinese Open-Source LLM Landscape (Sept 2025)\n\nBy mid-2025 China had become a global leader in open-source large language models (LLMs). According to Chinese state media, by July 2025 China accounted for 1,509 of the world’s ~3,755 publicly re",
+          "relevance_score": 0.97,
+          "authors": null,
+          "publication_date": "2025-11-18",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Cheap and Open Source, Chinese AI Models Are Taking Off - The Wire China",
+          "url": "https://www.thewirechina.com/2025/11/09/cheap-and-open-source-chinese-ai-models-are-taking-off/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Large language models produced by Chinese AI firms have received a flurry of unexpected endorsements lately.\n\nBrian Chesky, chief executive of Airbnb, caused a stir last month when he revealed that the company favours Alibaba’s Qwen over ChatGPT for its customer service chatbot, because it is “fast ",
+          "relevance_score": 0.9534226029196153,
+          "authors": null,
+          "publication_date": "2025-11-18",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "DeepSeek - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/DeepSeek?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "From Wikipedia, the free encyclopedia\n\nChinese artificial intelligence company\n\nThis article is about the company. For the chatbot, see [DeepSeek (chatbot)](https://en.wikipedia.org/wiki/DeepSeek_(chatbot)).\n\n| |\n| --- |\n| Native name | 杭州深度求索人工智能基础技术研究有限公司 |\n| --- | --- |\n| Company type | Private |",
+          "relevance_score": 0.9284277384720727,
+          "authors": null,
+          "publication_date": "2025-11-18",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Kimi (chatbot) - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kimi_(chatbot)?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Kimi (chatbot)\n\n- [Article](https://en.wikipedia.org/wiki/Kimi_(chatbot)) - [Talk](https://en.wikipedia.org/wiki/Talk:Kimi_(chatbot))\n\n**Kimi** is an [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) (AI) [chatbot](https://en.wikipedia.org/wiki/Chatbot) and series of [",
+          "relevance_score": 0.9117279939166373,
+          "authors": null,
+          "publication_date": "2025-11-17",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "China’s Moonshot AI launches new model lauded as No 1 among open-source systems | South China Morning Post",
+          "url": "https://www.scmp.com/tech/tech-trends/article/3331971/chinas-moonshot-ai-launches-new-model-lauded-no-1-among-open-source-systems?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "# China’s Moonshot AI launches new model lauded as No 1 among open-source systems\n\nKimi K2 Thinking sets ‘new records across benchmarks that assess reasoning, coding and agent capabilities’, Moonshot AI researchers say\n\nThose results reflected how Chinese AI companies have closed the performance gap",
+          "relevance_score": 0.9110022767764534,
+          "authors": null,
+          "publication_date": "2025-11-08",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Why new model of China’s Moonshot AI stirs ‘DeepSeek moment’ debate | South China Morning Post",
+          "url": "https://www.scmp.com/tech/article/3332238/why-new-model-chinas-moonshot-ai-stirs-deepseek-moment-debate?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "# Why new model of China’s Moonshot AI stirs ‘DeepSeek moment’ debate\n\nKimi K2 Thinking outperforms OpenAI’s GPT-5 and Anthropic’s Claude Sonnet 4.5, sparking comparisons to DeepSeek’s breakthrough\n\nBeijing-based Moonshot AI, a start-up valued at US$3.3 billion and backed by Chinese tech giants like",
+          "relevance_score": 0.9024377290498545,
+          "authors": null,
+          "publication_date": "2025-11-11",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Comparative performance of Chinese and international large language models on the Chinese radiology attending physician qualification examination | Scientific Reports",
+          "url": "https://www.nature.com/articles/s41598-025-23973-1?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Thank you for visiting nature.com. You are using a browser version with limited support for CSS. To obtain the best experience, we recommend you use a more up to date browser (or turn off compatibility mode in Internet Explorer). In the meantime, to ensure continued support, we are displaying the si",
+          "relevance_score": 0.875667884637736,
+          "authors": null,
+          "publication_date": "2025-11-10",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "The Impact of Open-Source LLMs on the AI Industry, and the World",
+          "url": "https://bordercybergroup.com/the-impact-of-open-source-llms-on-the-ai-industry-a-deep-dive-into-deepseek-and-llama/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "By 2025, the AI landscape has undergone a seismic shift. Once the exclusive domain of tech giants with billion-dollar budgets, large language models (LLMs) now hum in the servers of startups, universities, and even hobbyists—thanks to the open-source revolution. Models like DeepSeek and Llama have t",
+          "relevance_score": 0.8368414429042578,
+          "authors": null,
+          "publication_date": "2025-11-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "The US Needs an Open Source AI Intervention to Beat China | WIRED",
+          "url": "https://www.wired.com/story/us-needs-open-source-ai-model-intervention-china/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Since 2022, America has had a solid lead in artificial intelligence thanks to advanced models from high-flying companies like OpenAI, Google DeepMind, Anthropic, and xAI. A growing number of experts, however, worry that the US is starting to fall behind when it comes to minting open-weight AI models",
+          "relevance_score": 0.8060498360404188,
+          "authors": null,
+          "publication_date": "2025-11-19",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "A Brief History of LLMs. From Transformers (2017) to DeepSeek-R1… | by LM Po | Medium",
+          "url": "https://medium.com/@lmpo/a-brief-history-of-lmms-from-transformers-2017-to-deepseek-r1-2025-dae75dd3f59a?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "Member-only story\n\n# A Brief History of LLMs\n\n## From Transformers (2017) to DeepSeek-R1 (2025)\n\n--\n\nIn early 2025, the launch of China’s groundbreaking and cost-effective Large Language Model (LLM), DeepSeek-R1, sparked a seismic shift in AI. This article traces the evolution of LLMs, starting with",
+          "relevance_score": 0.7972833291112308,
+          "authors": null,
+          "publication_date": "2025-11-08",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "AI models from China's DeepSeek, Alibaba and the US flatter users too much, study finds",
+          "url": "https://www.yahoo.com/news/articles/ai-models-chinas-deepseek-alibaba-093000201.html?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "AI models from China's DeepSeek, Alibaba and the US flatter users too much, study finds\n\nReturn to Homepage\n\n## Top Stories:\n\n- [Marjorie Taylor Greene resigns](https://www.yahoo.com/news/articles/rep-marjorie-taylor-greene-georgia-012330266.html) - [CDC's autism pivot](https://www.yahoo.com/news/ar",
+          "relevance_score": 0.7691287164487165,
+          "authors": null,
+          "publication_date": "2025-10-31",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Do Chinese models speak Chinese languages?",
+          "url": "https://arxiv.org/abs/2504.00289?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "### **1 Introduction**\n\nChina has become a global leader in open-source AI with a series of high performing LLMs (Yang et al., 2024; DeepSeek-AI, 2025; Young et al., 2024; Yang et al., 2023; Cai et al., 2024). In particular, DeepSeek-R1's open weight release in January 2025 sent shockwaves beyond th",
+          "relevance_score": 0.757399134535352,
+          "authors": null,
+          "publication_date": "2025-04-07",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "Implementing a Resource-Light and Low-Code Large Language Model System for Information Extraction from Mammography Reports: A Case Study",
+          "url": "https://www.medrxiv.org/content/10.1101/2025.04.08.25325371?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-medrxiv",
+          "content_preview": "## METHODS\n### LLM-BASED DATA EXTRACTION SYSTEM IN A LOCAL SETTING\n\nRombos-LLM-V2.6-Qwen-14b (Rombos) is a fine-tuned version of Alibaba’s Qwen2.5-14B model for precise instruction following [39]. The Qwen series excels in language understanding, generation, multilingual tasks, coding, math, and rea",
+          "relevance_score": 0.7342968671523085,
+          "authors": null,
+          "publication_date": "2025-01-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "PewDiePie Dives Into an AI Side-Quest, Revealing His Self-Made ‘ChatOS’; Fueled by Chinese Qwen Models & Modded RTX 4090s",
+          "url": "https://wccftech.com/pewdiepie-dives-into-an-ai-side-quest-revealing-his-self-made-chatos/?utm_source=valyu.ai&utm_medium=referral",
+          "source": "web",
+          "content_preview": "# PewDiePie Dives Into an AI Side-Quest, Revealing His Self-Made ‘ChatOS’; Fueled by Chinese Qwen Models & Modded RTX 4090s\n\nWell, the famous YouTuber PewDiePie has been found 'tinkering' with AI in a rather unique fashion, creating his own AI service that uses Chinese open-source models with NVIDIA",
+          "relevance_score": 0.7318060975979594,
+          "authors": null,
+          "publication_date": "2025-11-01",
+          "doi": null,
+          "citation_count": null
+        },
+        {
+          "title": "A Survey of Large Language Models",
+          "url": "https://arxiv.org/abs/2303.18223?utm_source=valyu.ai&utm_medium=referral",
+          "source": "valyu/valyu-arxiv",
+          "content_preview": "pre-training bidirectional language models with specially designed pre-training tasks on large-scale unlabeled corpora. These pre-trained context-aware word representations are very effective as general-purpose semantic features, which have largely raised the performance bar of NLP tasks. This study",
+          "relevance_score": 0.7080636657770977,
+          "authors": null,
+          "publication_date": "2023-01-01",
+          "doi": null,
+          "citation_count": null
+        }
+      ]
+    }
+  ]
+}
