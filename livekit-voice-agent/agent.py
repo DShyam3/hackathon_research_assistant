@@ -39,6 +39,10 @@ async def my_agent(ctx: agents.JobContext):
     @session.on("user_input_transcribed")
     def on_user_input_transcribed(event: UserInputTranscribedEvent):
         """Log user transcripts in real-time."""
+        # Only log and print final transcripts (when user has stopped talking)
+        if not event.is_final:
+            return
+        
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         entry = f"[{timestamp}] USER: {event.transcript} (language: {event.language}, final: {event.is_final})"
         conversation_history.append(entry)
